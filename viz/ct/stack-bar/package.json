@@ -1,0 +1,14 @@
+{
+  "name": "@thetylerwolf/day-9-stacked-bar-chart",
+  "main": "49916be8baeb1b33@282.js",
+  "version": "282.0.0",
+  "homepage": "https://observablehq.com/@thetylerwolf/day-9-stacked-bar-chart",
+  "author": {
+    "name": "Tyler Wolf",
+    "url": "https://observablehq.com/@thetylerwolf"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

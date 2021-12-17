@@ -1,0 +1,14 @@
+{
+  "name": "@vega/multi-series-line-chart-with-tooltip",
+  "main": "dd1deb1a1216744f@298.js",
+  "version": "298.0.0",
+  "homepage": "https://observablehq.com/@vega/multi-series-line-chart-with-tooltip",
+  "author": {
+    "name": "Vega",
+    "url": "https://observablehq.com/@vega"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@toltman/aiddata-world-map",
+  "main": "a2abbcb8f2c9ad2e@319.js",
+  "version": "319.0.0",
+  "homepage": "https://observablehq.com/@toltman/aiddata-world-map",
+  "author": {
+    "name": "Tim Oltman",
+    "url": "https://observablehq.com/@toltman"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

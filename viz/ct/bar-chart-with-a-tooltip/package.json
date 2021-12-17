@@ -1,0 +1,14 @@
+{
+  "name": "@anreut/bar-chart-with-a-tooltip",
+  "main": "b7a11aff461d2eb7@70.js",
+  "version": "70.0.0",
+  "homepage": "https://observablehq.com/@anreut/bar-chart-with-a-tooltip",
+  "author": {
+    "name": "Anastasia Reut",
+    "url": "https://observablehq.com/@anreut"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
