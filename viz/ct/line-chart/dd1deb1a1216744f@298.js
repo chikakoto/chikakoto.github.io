@@ -5,7 +5,7 @@ import define2 from "./45e5909f35596963@476.js";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const country = urlParams.get('country')
-const file = "./files/test.csv"
+const file = "https://chikakoto.github.io/viz/ct/line-chart/files/test.csv"
 const jsonFile = "input.json"
 //console.log(file)
 // const input = file.files[0];
