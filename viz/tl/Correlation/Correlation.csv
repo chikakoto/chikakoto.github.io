@@ -1,0 +1,101 @@
+group,variable,value
+Dairy,Dairy,1
+Dairy,Cereal,0.079348239
+Dairy,Fish,0.074223672
+Dairy,Fruits & Nuts,0.022244284
+Dairy,Live Animals,-0.005003824
+Dairy,Meat,0.250282583
+Dairy,Vegetables,0.071951495
+Dairy,Total Balance,0.262443009
+Dairy,Rate Per Million,0.044438447
+Dairy,Death Proportion,0.0059934
+Cereal,Dairy,0.079348239
+Cereal,Cereal,1
+Cereal,Fish,0.01814279
+Cereal,Fruits & Nuts,0.02580231
+Cereal,Live Animals,-0.050263622
+Cereal,Meat,0.064000608
+Cereal,Vegetables,0.110159377
+Cereal,Total Balance,0.558117658
+Cereal,Rate Per Million,0.06234211
+Cereal,Death Proportion,-0.001161129
+Fish,Dairy,0.074223672
+Fish,Cereal,0.01814279
+Fish,Fish,1
+Fish,Fruits & Nuts,0.027130842
+Fish,Live Animals,-0.042593633
+Fish,Meat,0.100384567
+Fish,Vegetables,0.025170192
+Fish,Total Balance,0.288768133
+Fish,Rate Per Million,0.009377132
+Fish,Death Proportion,-0.070577337
+Fruits & Nuts,Dairy,0.022244284
+Fruits & Nuts,Cereal,0.02580231
+Fruits & Nuts,Fish,0.027130842
+Fruits & Nuts,Fruits & Nuts,1
+Fruits & Nuts,Live Animals,0.025813029
+Fruits & Nuts,Meat,0.056923864
+Fruits & Nuts,Vegetables,0.253060212
+Fruits & Nuts,Total Balance,0.380509129
+Fruits & Nuts,Rate Per Million,-0.031840905
+Fruits & Nuts,Death Proportion,-0.07323239
+Live Animals,Dairy,-0.005003824
+Live Animals,Cereal,-0.050263622
+Live Animals,Fish,-0.042593633
+Live Animals,Fruits & Nuts,0.025813029
+Live Animals,Live Animals,1
+Live Animals,Meat,0.053519823
+Live Animals,Vegetables,-0.021548773
+Live Animals,Total Balance,0.100657586
+Live Animals,Rate Per Million,0.066955065
+Live Animals,Death Proportion,0.009758659
+Meat,Dairy,0.250282583
+Meat,Cereal,0.064000608
+Meat,Fish,0.100384567
+Meat,Fruits & Nuts,0.056923864
+Meat,Live Animals,0.053519823
+Meat,Meat,1
+Meat,Vegetables,0.079448676
+Meat,Total Balance,0.342611647
+Meat,Rate Per Million,0.058002048
+Meat,Death Proportion,0.029143377
+Vegetables,Dairy,0.071951495
+Vegetables,Cereal,0.110159377
+Vegetables,Fish,0.025170192
+Vegetables,Fruits & Nuts,0.253060212
+Vegetables,Live Animals,-0.021548773
+Vegetables,Meat,0.079448676
+Vegetables,Vegetables,1
+Vegetables,Total Balance,0.389824902
+Vegetables,Rate Per Million,-0.079366499
+Vegetables,Death Proportion,0.032576169
+Total Balance,Dairy,0.262443009
+Total Balance,Cereal,0.558117658
+Total Balance,Fish,0.288768133
+Total Balance,Fruits & Nuts,0.380509129
+Total Balance,Live Animals,0.100657586
+Total Balance,Meat,0.342611647
+Total Balance,Vegetables,0.389824902
+Total Balance,Total Balance,1
+Total Balance,Rate Per Million,0.09860787
+Total Balance,Death Proportion,0.087317919
+Rate Per Million,Dairy,0.044438447
+Rate Per Million,Cereal,0.06234211
+Rate Per Million,Fish,0.009377132
+Rate Per Million,Fruits & Nuts,-0.031840905
+Rate Per Million,Live Animals,0.066955065
+Rate Per Million,Meat,0.058002048
+Rate Per Million,Vegetables,-0.079366499
+Rate Per Million,Total Balance,0.09860787
+Rate Per Million,Rate Per Million,1
+Rate Per Million,Death Proportion,0.334273055
+Death Proportion,Dairy,0.0059934
+Death Proportion,Cereal,-0.001161129
+Death Proportion,Fish,-0.070577337
+Death Proportion,Fruits & Nuts,-0.07323239
+Death Proportion,Live Animals,0.009758659
+Death Proportion,Meat,0.029143377
+Death Proportion,Vegetables,0.032576169
+Death Proportion,Total Balance,0.087317919
+Death Proportion,Rate Per Million,0.334273055
+Death Proportion,Death Proportion,1

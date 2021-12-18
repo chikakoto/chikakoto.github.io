@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+#my_dataviz {
+position: absolute;
+top: 0px;
+bottom: 125px;
+left: 0px;
+right: 0px;
+}
+
+#legend1 {
+position: absolute;
+top: 30px;
+bottom: 125px;
+left: 500px;
+right: 0px;
+}
+
+</style>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="legend1"></div>
+<div id="my_dataviz">
+    <script>
+var myColor = d3.scaleLinear()
+  .domain([-1,0, 1])
+  .range(["orange", "white", "green"])
+
+var colorScale1 = d3.scaleSequential(d3.interpolatePlasma)
+  .domain([0, 20]);
+continuous("#legend1", myColor);
+// create continuous color legend
+function continuous(selector_id, colorscale) {
+  var legendheight = 200,
+      legendwidth = 80,
+      margin = {top: 10, right: 60, bottom: 10, left: 2};
+
+  var canvas = d3.select(selector_id)
+    .style("height", legendheight + "px")
+    .style("width", legendwidth + "px")
+    .style("position", "relative")
+    .append("canvas")
+    .attr("height", legendheight - margin.top - margin.bottom)
+    .attr("width", 1)
+    .style("height", (legendheight - margin.top - margin.bottom) + "px")
+    .style("width", (legendwidth - margin.left - margin.right) + "px")
+    .style("border", "1px solid #000")
+    .style("position", "absolute")
+    .style("top", (margin.top) + "px")
+    .style("left", (margin.left) + "px")
+    .node();
+
+  var ctx = canvas.getContext("2d");
+
+  var legendscale = d3.scaleLinear()
+    .range([1, legendheight - margin.top - margin.bottom])
+    .domain([1,-1]);
+
+  // image data hackery based on http://bl.ocks.org/mbostock/048d21cf747371b11884f75ad896e5a5
+  var image = ctx.createImageData(1, legendheight);
+  d3.range(legendheight).forEach(function(i) {
+    var c = d3.rgb(colorscale(legendscale.invert(i)));
+    image.data[4*i] = c.r;
+    image.data[4*i + 1] = c.g;
+    image.data[4*i + 2] = c.b;
+    image.data[4*i + 3] = 255;
+  });
+  ctx.putImageData(image, 0, 0);
+
+  // A simpler way to do the above, but possibly slower. keep in mind the legend width is stretched because the width attr of the canvas is 1
+  // See http://stackoverflow.com/questions/4899799/whats-the-best-way-to-set-a-single-pixel-in-an-html5-canvas
+  /*
+  d3.range(legendheight).forEach(function(i) {
+    ctx.fillStyle = colorscale(legendscale.invert(i));
+    ctx.fillRect(0,i,1,1);
+  });
+  */
+
+  var legendaxis = d3.axisRight()
+    .scale(legendscale)
+    .tickSize(6)
+    .ticks(8);
+
+  var svg = d3.select(selector_id)
+    .append("svg")
+    .attr("height", (legendheight) + "px")
+    .attr("width", (legendwidth) + "px")
+    .style("position", "absolute")
+    .style("left", "0px")
+    .style("top", "0px")
+
+  svg
+    .append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(" + (legendwidth - margin.left - margin.right + 3) + "," + (margin.top) + ")")
+    .call(legendaxis);
+
+};
+
+// set the dimensions and margins of the graph
+var margin = {top: 40, right: 30, bottom: 90, left: 100},
+  width = 520 - margin.left - margin.right,
+  height = 510 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+.append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+// Labels of row and columns
+var myGroups = ["Dairy", "Cereal","Fish", "Fruits & Nuts", "Live Animals", "Meat", "Vegetables", "Total Balance", "Rate Per Million", "Death Proportion"]
+var myVars =  ["Dairy", "Cereal","Fish", "Fruits & Nuts", "Live Animals", "Meat", "Vegetables", "Total Balance", "Rate Per Million", "Death Proportion"]
+
+// Build X scales and axis:
+var x = d3.scaleBand()
+  .range([ 0, width ])
+  .domain(myGroups)
+  .padding(0.01);
+
+
+svg.append("g")
+  .attr("transform", "translate(0," + height + ")")
+  .call(d3.axisBottom(x))
+  .selectAll("text")
+    .attr("y", 0)
+    .attr("x", 10)
+    .attr("transform", "rotate(90)")
+    .style("text-anchor", "start"); ;
+  
+
+// Build X scales and axis:
+var y = d3.scaleBand()
+  .range([ height, 0 ])
+  .domain(myVars)
+  .padding(0.01);
+svg.append("g")
+  .call(d3.axisLeft(y));
+
+
+
+//Read the data
+d3.csv("https://raw.githubusercontent.com/usersblock/CovidVsFood/main/Correlation/Correlation.csv", function(data) {
+
+  // create a tooltip
+  var tooltip = d3.select("#my_dataviz")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    tooltip.style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    tooltip
+      .html("The exact value of<br>this cell is: " + d.value)
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+  }
+  var mouseleave = function(d) {
+    tooltip.style("opacity", 0)
+  }
+
+  // add the squares
+  svg.selectAll()
+    .data(data, function(d) {return d.group+':'+d.variable;})
+    .enter()
+    .append("rect")
+      .attr("x", function(d) { return x(d.group) })
+      .attr("y", function(d) { return y(d.variable) })
+      .attr("width", x.bandwidth() )
+      .attr("height", y.bandwidth() )
+      .style("fill", function(d) { return myColor(d.value)} )
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+
+        svg.append("text")
+        .attr("x", 200)             
+        .attr("y", -10)
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .text("Correlation Matrix Heatmap");
+    
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(x)
+  .selectAll("text")
+    .attr("y", 0)
+    .attr("x", 9)
+    .attr("dy", ".35em")
+    .attr("transform", "rotate(90)")
+    .style("text-anchor", "start"); 
+
+    
+})
+
+</script>
+</div>
