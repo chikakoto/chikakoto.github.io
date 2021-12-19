@@ -6,13 +6,13 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const country = urlParams.get('country')
 const type = urlParams.get('type')
-let file = "./files/producer_price/producer_price_" + country + ".csv";
+let file = "https://chikakoto.github.io/viz/ct/line-chart/files/producer_price/producer_price_" + country + ".csv";
 let label = ["Cereals", "Citrus Fruit", "Coarse Grain", "Fruit", "Meat", "Milk", "Pulses", "Roots and Tubers", "Treenuts", "Vegetables"]
 if (type == 1) {
-  file = "./files/consumer_price/consumer_price_" + country + ".csv";
+  file = "https://chikakoto.github.io/viz/ct/line-chart/files/consumer_price/consumer_price_" + country + ".csv";
   label = ["Food Indices", "General Indices"]
 } else if (type == 2) {
-  file = "./files/annual_growth/annual_growth_" + country + ".csv"
+  file = "https://chikakoto.github.io/viz/ct/line-chart/files/annual_growth/annual_growth_" + country + ".csv"
   label = ["Annual growth %"]
 }
 
