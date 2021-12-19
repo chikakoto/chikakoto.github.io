@@ -52,10 +52,17 @@
     var tradeType = 0
     var priceType = 0
     function changeCountry(country) {
-        document.getElementById('trade-select').value = country
-        document.getElementById('price-select').value = country
-        reloadTradeCountry()
-        reloadPriceCountry()
+        if (tradeItems.includes(country)) {
+            document.getElementById('trade-select').value = country
+            reloadTradeCountry()
+        }
+
+        if ((priceType == 0 && ppItems.includes(country)) ||
+            (priceType == 1 && cpItems.includes(country)) ||
+            (priceType == 2 && agItems.includes(country))) {
+            document.getElementById('price-select').value = country
+            reloadPriceCountry()
+        }
     }
 
     function reloadMap(type){
@@ -106,16 +113,24 @@
 
     function reloadTradeCountry(){
         var country = document.getElementById('trade-select').value;
-        document.getElementById('price-select').value = country;
         document.getElementById('stackbar').src = 'stack-bar/index.html?type=' + tradeType + '&country=' + country;
-        document.getElementById('linechart').src = 'line-chart/index.html?type=' + priceType + '&country=' + country;
+
+        if((priceType == 0 && ppItems.includes(country)) || 
+            (priceType == 1 && cpItems.includes(country)) || 
+            (priceType == 2 && agItems.includes(country))){
+            document.getElementById('price-select').value = country;
+            document.getElementById('linechart').src = 'line-chart/index.html?type=' + priceType + '&country=' + country;
+        }
     }
 
     function reloadPriceCountry() {
         var country = document.getElementById('price-select').value;
-        document.getElementById('trade-select').value = country;
         document.getElementById('linechart').src = 'line-chart/index.html?type=' + priceType + '&country=' + country;
-        document.getElementById('stackbar').src = 'stack-bar/index.html?type=' + tradeType + '&country=' + country;
+
+        if(tradeItems.includes(country)){
+            document.getElementById('trade-select').value = country;
+            document.getElementById('stackbar').src = 'stack-bar/index.html?type=' + tradeType + '&country=' + country;
+        }
     }
 
     var tradeItems = ['Afghanistan', 'Albania', 'Algeria', 'Angola',
@@ -234,7 +249,8 @@
             'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Uganda', 'Ukraine',
             'United Arab Emirates', 'United Kingdom', 'Tanzania',
             'United States of America', 'Uruguay', 'Uzbekistan', 'Vanuatu',
-            'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe']
+            'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe',
+            'World', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
     var agItems = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola',
             'Anguilla', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba',
@@ -282,7 +298,10 @@
             'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom',
             'Tanzania', 'United States of America', 'Uruguay', 'USSR',
             'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'Yemen',
-            'Yemen Ar Rp', 'Yemen Dem', 'Yugoslav SFR', 'Zambia', 'Zimbabwe']
+            'Yemen Ar Rp', 'Yemen Dem', 'Yugoslav SFR', 'Zambia', 'Zimbabwe',
+            'World', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
+
+    var except = ['World', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
     $.each(tradeItems, function (i, tradeItems) {
         $('#trade-select').append($('<option>', {
