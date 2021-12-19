@@ -65,7 +65,7 @@ export default function define(runtime, observer) {
     .layer(lineAndPoint, rule )
     .encode(vl.x().fieldT("date"))
     .data(file)
-    .width(width - 200)
+    .width(width - 220)
     .height(300)
     .render();
 }
