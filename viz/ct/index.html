@@ -36,7 +36,8 @@
             <select onchange="reloadPriceCountry()" id="price-select"></select>
             <input type="radio" name="line-type" id="line-type-0" value="0" onclick="reloadPrice(0)" checked> Producer Price 
             <input type="radio" name="line-type" id="line-type-1" value="1" onclick="reloadPrice(1)"> Customer Price
-            <input type="radio" name="line-type" id="line-type-2" value="2" onclick="reloadPrice(2)"> Annual Growth<br>
+            <input type="radio" name="line-type" id="line-type-2" value="2" onclick="reloadPrice(2)"> GDP
+            <input type="radio" name="line-type" id="line-type-3" value="3" onclick="reloadPrice(3)"> Annual Growth<br>
         </div>
         <div>
             <iframe src="line-chart/index.html?type=0&country=Afghanistan" width="100%" height="380px" frameborder="0" id='linechart'></iframe>
@@ -59,7 +60,8 @@
 
         if ((priceType == 0 && ppItems.includes(country)) ||
             (priceType == 1 && cpItems.includes(country)) ||
-            (priceType == 2 && agItems.includes(country))) {
+            (priceType == 2 && agItems.includes(country)) || 
+            (priceType == 3 && agItems.includes(country))) {
             document.getElementById('price-select').value = country
             reloadPriceCountry()
         }
@@ -98,7 +100,7 @@
         var items = ppItems
         if(type==1){
             items = cpItems
-        } else if (type == 2){
+        } else if (type == 2 || type == 3){
             items = agItems
         }
         $.each(items, function (i, items) {
@@ -300,8 +302,6 @@
             'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'Yemen',
             'Yemen Ar Rp', 'Yemen Dem', 'Yugoslav SFR', 'Zambia', 'Zimbabwe',
             'World', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
-
-    var except = ['World', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania']
 
     $.each(tradeItems, function (i, tradeItems) {
         $('#trade-select').append($('<option>', {

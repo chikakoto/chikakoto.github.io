@@ -12,9 +12,13 @@ if (type == 1) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/consumer_price/consumer_price_" + country + ".csv";
   label = ["Food Indices", "General Indices"]
 } else if (type == 2) {
+  file = "https://chikakoto.github.io/viz/ct/line-chart/files/gdp/gdp_" + country + ".csv"
+  label = ["Value US$"]
+} else if (type == 3) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/annual_growth/annual_growth_" + country + ".csv"
   label = ["Annual growth %"]
 }
+
 
 //
 export default function define(runtime, observer) {
