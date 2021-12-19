@@ -91,20 +91,20 @@ Scrubber(years, {
   return svg.node()
 }
 );
-  main.variable(observer()).define(["legend","cScale"], function(legend,cScale){return(
+  main.variable(observer()).define(["legend", "cScale"], function (legend, cScale) {
+    return (
+
 legend({
   color: cScale,
-  title: "Export Value Base Period Price",
+  title: trade+" Value Base Period Price",
   tickFormat: t => "$" + t/1e9 + "B",
   ticks: 5,
   width: 500
 })
 )});
-//   main.variable(observer()).define(["html"], function(html){return(
-// html`<small>
-// <b>Note:</b> Countries not present in the dataset for the year selected are shown in grey. I use current country names and borders for the map, so countries with changing names and border may not be represented in all years. Additionally, several countries are not represented because their name is not consistent between datasets. This may be fixed in a future update.
-// </small>`
-// )});
+  main.variable(observer()).define(["html"], function(html){return(
+html`<div style="height:400px;"></div>`
+)});
   main.variable(observer()).define(["md"], function(md){return(
 md`## Appendix`
 )});
@@ -162,9 +162,9 @@ d3.geoPath(projection)
 );
   main.variable(observer("data")).define("data", ["d3","FileAttachment"], async function(d3,FileAttachment){return(
 d3.csvParse(await FileAttachment("aiddata.csv").text(), d => {
-  if (d.country === "United States") {
-    d.country = "United States of America"
-  }
+  // if (d.country === "United States") {
+  //   d.country = "United States of America"
+  // }
   return {
     country: d.country,
     year: +d.year,

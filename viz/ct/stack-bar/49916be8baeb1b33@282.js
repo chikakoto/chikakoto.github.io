@@ -19,13 +19,13 @@ export default function define(runtime, observer) {
   main.variable(observer("legend")).define("legend", ["d3","data","colors"], function(d3,data,colors)
 {
   const svg = d3.create('svg')
-      .attr('width', 1200)
+      .attr('width', '100%')
       .attr('height', 25)
   
   svg.selectAll('g')
     .data( data.categories.slice(0) )
     .join('g')
-      .attr('transform', (d,i) => `translate(${i * 170},5)`)
+      .attr('transform', (d,i) => `translate(${i * 140},5)`)
     .call(g => g
        .append('rect')
          .attr('width', 20)
@@ -51,7 +51,7 @@ export default function define(runtime, observer) {
 {
 
   const svg = d3.create('svg')
-      .attr('width', 1200)
+      .attr('width', '100%')
       .attr('height', 500)
 
   // Pass our data to the stack to generate the layer positions
@@ -80,7 +80,9 @@ export default function define(runtime, observer) {
       var str = ""
       for (const property in d.data) {
         if (property != 'total' && property != 'location') {
-          str +=`${property}:  ${d3.format("$0.2s")(d.data[property]).replace(/G/, "B")}<br>`;
+          str += `${property}:  ${d3.format("$0.2s")(d.data[property]).replace(/G/, "B")}<br>`;
+        } else if (property == 'location') { 
+          str += `Year: ${d.data[property]}<br>`;
         }
       }
       // if (typeof(d.data['Cereals and Preparations'])!='undefined') {
@@ -99,7 +101,6 @@ export default function define(runtime, observer) {
             `<div>`+str+
              `</div>`)
           .style('visibility', 'visible');
-            console.log(d)
         // d3.select(this).attr('fill', 'blue');
       })
       .on('mousemove', function (e) {

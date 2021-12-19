@@ -1,0 +1,253 @@
+,symbol,date,price
+29041,Cereals,Jan 1 1992,0.1
+29042,Cereals,Jan 1 1993,0.62
+29043,Cereals,Jan 1 1994,1.54
+29044,Cereals,Jan 1 1995,4.56
+29045,Cereals,Jan 1 1996,8.34
+29046,Cereals,Jan 1 1997,7.86
+29047,Cereals,Jan 1 1998,7.1
+29048,Cereals,Jan 1 1999,19.16
+29049,Cereals,Jan 1 2000,27.76
+29050,Cereals,Jan 1 2001,29.15
+29051,Cereals,Jan 1 2002,23.75
+29052,Cereals,Jan 1 2003,30.2
+29053,Cereals,Jan 1 2004,40.16
+29054,Cereals,Jan 1 2005,32.3
+29055,Cereals,Jan 1 2006,39.06
+29056,Cereals,Jan 1 2007,58.86
+29057,Cereals,Jan 1 2008,65.15
+29058,Cereals,Jan 1 2009,54.56
+29059,Cereals,Jan 1 2010,50.9
+29060,Cereals,Jan 1 2011,67.51
+29061,Cereals,Jan 1 2012,80.53
+29062,Cereals,Jan 1 2013,84.64
+29063,Cereals,Jan 1 2014,82.25
+29064,Cereals,Jan 1 2015,107.32
+29065,Cereals,Jan 1 2016,110.44
+29066,Cereals,Jan 1 2017,92.86
+29067,Cereals,Jan 1 2018,106.21
+29068,Cereals,Jan 1 2019,128.75
+29069,Coarse Grain,Jan 1 1992,0.1
+29070,Coarse Grain,Jan 1 1993,0.68
+29071,Coarse Grain,Jan 1 1994,2.02
+29072,Coarse Grain,Jan 1 1995,4.8
+29073,Coarse Grain,Jan 1 1996,9.41
+29074,Coarse Grain,Jan 1 1997,8.44
+29075,Coarse Grain,Jan 1 1998,7.99
+29076,Coarse Grain,Jan 1 1999,21.23
+29077,Coarse Grain,Jan 1 2000,30.22
+29078,Coarse Grain,Jan 1 2001,32.78
+29079,Coarse Grain,Jan 1 2002,28.43
+29080,Coarse Grain,Jan 1 2003,31.69
+29081,Coarse Grain,Jan 1 2004,41.69
+29082,Coarse Grain,Jan 1 2005,35.8
+29083,Coarse Grain,Jan 1 2006,42.67
+29084,Coarse Grain,Jan 1 2007,63.33
+29085,Coarse Grain,Jan 1 2008,71.16
+29086,Coarse Grain,Jan 1 2009,57.68
+29087,Coarse Grain,Jan 1 2010,56.14
+29088,Coarse Grain,Jan 1 2011,76.75
+29089,Coarse Grain,Jan 1 2012,85.54
+29090,Coarse Grain,Jan 1 2013,89.4
+29091,Coarse Grain,Jan 1 2014,79.22
+29092,Coarse Grain,Jan 1 2015,106.02
+29093,Coarse Grain,Jan 1 2016,114.76
+29094,Coarse Grain,Jan 1 2017,98.63
+29095,Coarse Grain,Jan 1 2018,109.2
+29096,Coarse Grain,Jan 1 2019,134.68
+29097,Fruit,Jan 1 1992,0.03
+29098,Fruit,Jan 1 1993,0.33
+29099,Fruit,Jan 1 1994,1.11
+29100,Fruit,Jan 1 1995,2.6
+29101,Fruit,Jan 1 1996,3.42
+29102,Fruit,Jan 1 1997,3.72
+29103,Fruit,Jan 1 1998,4.38
+29104,Fruit,Jan 1 1999,12.88
+29105,Fruit,Jan 1 2000,13.74
+29106,Fruit,Jan 1 2001,15.86
+29107,Fruit,Jan 1 2002,18.57
+29108,Fruit,Jan 1 2003,18.95
+29109,Fruit,Jan 1 2004,23.74
+29110,Fruit,Jan 1 2005,24.83
+29111,Fruit,Jan 1 2006,38.57
+29112,Fruit,Jan 1 2007,46.06
+29113,Fruit,Jan 1 2008,49.95
+29114,Fruit,Jan 1 2009,53.82
+29115,Fruit,Jan 1 2010,57.09
+29116,Fruit,Jan 1 2011,65.63
+29117,Fruit,Jan 1 2012,77.68
+29118,Fruit,Jan 1 2013,73.83
+29119,Fruit,Jan 1 2014,72.11
+29120,Fruit,Jan 1 2015,109.44
+29121,Fruit,Jan 1 2016,118.45
+29122,Fruit,Jan 1 2017,116.86
+29123,Fruit,Jan 1 2018,115.31
+29124,Fruit,Jan 1 2019,139.53
+29125,Meat,Jan 1 1992,0.03
+29126,Meat,Jan 1 1993,0.49
+29127,Meat,Jan 1 1994,1.52
+29128,Meat,Jan 1 1995,4.7
+29129,Meat,Jan 1 1996,7.58
+29130,Meat,Jan 1 1997,8.76
+29131,Meat,Jan 1 1998,14.49
+29132,Meat,Jan 1 1999,20.5
+29133,Meat,Jan 1 2000,23.98
+29134,Meat,Jan 1 2001,33.39
+29135,Meat,Jan 1 2002,33.34
+29136,Meat,Jan 1 2003,33.79
+29137,Meat,Jan 1 2004,40.33
+29138,Meat,Jan 1 2005,48.86
+29139,Meat,Jan 1 2006,49.45
+29140,Meat,Jan 1 2007,50.27
+29141,Meat,Jan 1 2008,60.32
+29142,Meat,Jan 1 2009,67.67
+29143,Meat,Jan 1 2010,69.42
+29144,Meat,Jan 1 2011,76.3
+29145,Meat,Jan 1 2012,83.06
+29146,Meat,Jan 1 2013,78.74
+29147,Meat,Jan 1 2014,89.54
+29148,Meat,Jan 1 2015,106.72
+29149,Meat,Jan 1 2016,103.77
+29150,Meat,Jan 1 2017,100.63
+29151,Meat,Jan 1 2018,103.65
+29152,Meat,Jan 1 2019,105.16
+29153,Milk,Jan 1 1992,0.03
+29154,Milk,Jan 1 1993,0.23
+29155,Milk,Jan 1 1994,0.78
+29156,Milk,Jan 1 1995,3.66
+29157,Milk,Jan 1 1996,4.55
+29158,Milk,Jan 1 1997,5.36
+29159,Milk,Jan 1 1998,6.15
+29160,Milk,Jan 1 1999,14.76
+29161,Milk,Jan 1 2000,17.56
+29162,Milk,Jan 1 2001,21.44
+29163,Milk,Jan 1 2002,20.92
+29164,Milk,Jan 1 2003,23.63
+29165,Milk,Jan 1 2004,28.12
+29166,Milk,Jan 1 2005,32.28
+29167,Milk,Jan 1 2006,34.86
+29168,Milk,Jan 1 2007,40.64
+29169,Milk,Jan 1 2008,53.24
+29170,Milk,Jan 1 2009,50.31
+29171,Milk,Jan 1 2010,59.78
+29172,Milk,Jan 1 2011,68.31
+29173,Milk,Jan 1 2012,65.74
+29174,Milk,Jan 1 2013,76.72
+29175,Milk,Jan 1 2014,94.79
+29176,Milk,Jan 1 2015,99.79
+29177,Milk,Jan 1 2016,105.42
+29178,Milk,Jan 1 2017,118.34
+29179,Milk,Jan 1 2018,110.45
+29180,Milk,Jan 1 2019,120.21
+29181,Pulses,Jan 1 1992,0.21
+29182,Pulses,Jan 1 1993,0.67
+29183,Pulses,Jan 1 1994,1.22
+29184,Pulses,Jan 1 1995,3.11
+29185,Pulses,Jan 1 1996,7.51
+29186,Pulses,Jan 1 1997,7.94
+29187,Pulses,Jan 1 1998,7.7
+29188,Pulses,Jan 1 1999,19.19
+29189,Pulses,Jan 1 2000,28.12
+29190,Pulses,Jan 1 2001,29.14
+29191,Pulses,Jan 1 2002,23.6
+29192,Pulses,Jan 1 2003,23.6
+29193,Pulses,Jan 1 2004,30.95
+29194,Pulses,Jan 1 2005,26.87
+29195,Pulses,Jan 1 2006,28.62
+29196,Pulses,Jan 1 2007,42.84
+29197,Pulses,Jan 1 2008,57.04
+29198,Pulses,Jan 1 2009,46.88
+29199,Pulses,Jan 1 2010,45.27
+29200,Pulses,Jan 1 2011,56.39
+29201,Pulses,Jan 1 2012,68.31
+29202,Pulses,Jan 1 2013,69.89
+29203,Pulses,Jan 1 2014,70.36
+29204,Pulses,Jan 1 2015,104.04
+29205,Pulses,Jan 1 2016,125.6
+29206,Pulses,Jan 1 2017,92.91
+29207,Pulses,Jan 1 2018,77.52
+29208,Pulses,Jan 1 2019,98.15
+29209,Roots and Tubers,Jan 1 1992,0.07
+29210,Roots and Tubers,Jan 1 1993,0.5
+29211,Roots and Tubers,Jan 1 1994,2.12
+29212,Roots and Tubers,Jan 1 1995,7.13
+29213,Roots and Tubers,Jan 1 1996,7.95
+29214,Roots and Tubers,Jan 1 1997,8.39
+29215,Roots and Tubers,Jan 1 1998,10.11
+29216,Roots and Tubers,Jan 1 1999,30.66
+29217,Roots and Tubers,Jan 1 2000,30.62
+29218,Roots and Tubers,Jan 1 2001,30.34
+29219,Roots and Tubers,Jan 1 2002,38.37
+29220,Roots and Tubers,Jan 1 2003,44.39
+29221,Roots and Tubers,Jan 1 2004,38.86
+29222,Roots and Tubers,Jan 1 2005,43.2
+29223,Roots and Tubers,Jan 1 2006,45.96
+29224,Roots and Tubers,Jan 1 2007,52.38
+29225,Roots and Tubers,Jan 1 2008,67.71
+29226,Roots and Tubers,Jan 1 2009,68.6
+29227,Roots and Tubers,Jan 1 2010,78.43
+29228,Roots and Tubers,Jan 1 2011,85.09
+29229,Roots and Tubers,Jan 1 2012,63.08
+29230,Roots and Tubers,Jan 1 2013,77.98
+29231,Roots and Tubers,Jan 1 2014,106.47
+29232,Roots and Tubers,Jan 1 2015,108.94
+29233,Roots and Tubers,Jan 1 2016,84.59
+29234,Roots and Tubers,Jan 1 2017,95.81
+29235,Roots and Tubers,Jan 1 2018,103.59
+29236,Roots and Tubers,Jan 1 2019,87.13
+29237,Treenuts,Jan 1 1992,0.09
+29238,Treenuts,Jan 1 1993,0.8
+29239,Treenuts,Jan 1 1994,1.9
+29240,Treenuts,Jan 1 1995,4.88
+29241,Treenuts,Jan 1 1996,6.43
+29242,Treenuts,Jan 1 1997,6.68
+29243,Treenuts,Jan 1 1998,9.9
+29244,Treenuts,Jan 1 1999,12.18
+29245,Treenuts,Jan 1 2000,17.32
+29246,Treenuts,Jan 1 2001,22.28
+29247,Treenuts,Jan 1 2002,25.41
+29248,Treenuts,Jan 1 2003,29.03
+29249,Treenuts,Jan 1 2004,37.13
+29250,Treenuts,Jan 1 2005,40.69
+29251,Treenuts,Jan 1 2006,42.44
+29252,Treenuts,Jan 1 2007,50.17
+29253,Treenuts,Jan 1 2008,63.56
+29254,Treenuts,Jan 1 2009,61.72
+29255,Treenuts,Jan 1 2010,65.73
+29256,Treenuts,Jan 1 2011,77.96
+29257,Treenuts,Jan 1 2012,77.57
+29258,Treenuts,Jan 1 2013,83.58
+29259,Treenuts,Jan 1 2014,90.22
+29260,Treenuts,Jan 1 2015,102.94
+29261,Treenuts,Jan 1 2016,106.85
+29262,Treenuts,Jan 1 2017,104.39
+29263,Treenuts,Jan 1 2018,103.5
+29264,Treenuts,Jan 1 2019,105.05
+29265,Vegetables,Jan 1 1992,0.04
+29266,Vegetables,Jan 1 1993,0.52
+29267,Vegetables,Jan 1 1994,2.17
+29268,Vegetables,Jan 1 1995,4.58
+29269,Vegetables,Jan 1 1996,6.98
+29270,Vegetables,Jan 1 1997,7.4
+29271,Vegetables,Jan 1 1998,8.21
+29272,Vegetables,Jan 1 1999,20.74
+29273,Vegetables,Jan 1 2000,21.86
+29274,Vegetables,Jan 1 2001,25.38
+29275,Vegetables,Jan 1 2002,29.84
+29276,Vegetables,Jan 1 2003,35.99
+29277,Vegetables,Jan 1 2004,38.81
+29278,Vegetables,Jan 1 2005,41.76
+29279,Vegetables,Jan 1 2006,47.52
+29280,Vegetables,Jan 1 2007,58.1
+29281,Vegetables,Jan 1 2008,69.16
+29282,Vegetables,Jan 1 2009,72.97
+29283,Vegetables,Jan 1 2010,83.29
+29284,Vegetables,Jan 1 2011,80.02
+29285,Vegetables,Jan 1 2012,71.43
+29286,Vegetables,Jan 1 2013,78.48
+29287,Vegetables,Jan 1 2014,92.36
+29288,Vegetables,Jan 1 2015,105.83
+29289,Vegetables,Jan 1 2016,101.8
+29290,Vegetables,Jan 1 2017,104.56
+29291,Vegetables,Jan 1 2018,106.82
+29292,Vegetables,Jan 1 2019,126.1

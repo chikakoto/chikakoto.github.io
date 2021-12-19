@@ -2,48 +2,28 @@
 <head>
     <meta charset="utf-8">
     <title>Food Production Trade and Price</title>
-    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div>
-        <div>Hover over the map shows the import and export value. 
-            <br>By clicking the country, the graphs below the world map will change the content accordingly.
+        <h2>Trade World Map</h2>
+        <div>By clicking the country, the graphs below the map will change the content accordingly.
             <br><br>
         </div>
         <div>
-            <input type="radio" name="type" value="import" onclick="reloadMap(0)" checked> Import <input
-                type="radio" name="type" value="export" onclick="reloadMap(1)"> Export<br>
+            <input type="radio" name="type" id="type-0" value="0" onclick="reloadMap(0)" checked> Import 
+            <input type="radio" name="type" id="type-1" value="1" onclick="reloadMap(1)"> Export<br>
         </div>
         <div>
-            <iframe src="world-map/index.html?type=0" width="100%" height="790px" frameborder="0" id='worldmap'></iframe>
+            <iframe src="world-map/index.html?type=0" width="100%" height="800px" frameborder="0" id='worldmap'></iframe>
         </div>
     </div>
     <div>
         <h2>Trade Items</h2>
         <div>
-            <select onchange="reloadCountry()">
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-                <option value="Angola">Angola</option>
-                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Armenia">Armenia</option>
-                <option value="Australia">Australia</option>
-                <option value="Austria">Austria</option>
-                <option value="Azerbaijan">Azerbaijan</option>
-                <option value="Bahrain">Bahrain</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Barbados">Barbados</option>
-                <option value="Belarus">Belarus</option>
-                <option value="Belgium">Belgium</option>
-                <option value="Belgium-Luxembourg">Belgium-Luxembourg</option>
-                <option value="Belize">Belize</option>
-                <option value="Benin">Benin</option>
-                <option value="Bhutan">Bhutan</option>
-            </select>
-            <input type="radio" name="bar-type" value="import" onclick="reloadBar(0)"> Import <input type="radio"
-                name="bar-type" value="export" onclick="reloadBar(1)"> Export<br>
+            <select onchange="reloadTradeCountry()" id="trade-select"></select>
+            <input type="radio" name="bar-type" id="bar-type-0" value="0" onclick="reloadBar(0)" checked> Import 
+            <input type="radio" name="bar-type" id="bar-type-1" value="1" onclick="reloadBar(1)"> Export<br>
         </div>
         <br>
         <div>
@@ -51,53 +31,271 @@
         </div>
     </div>
     <div>
-        <h1>Consumer Price Indices</h1>
+        <h2>Price Indices</h2>
         <div>
-            <select onchange="reloadCountry()">
-                <option value="Afghanistan">Afghanistan</option>
-                <option value="Albania">Albania</option>
-                <option value="Algeria">Algeria</option>
-                <option value="Angola">Angola</option>
-                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Armenia">Armenia</option>
-                <option value="Australia">Australia</option>
-                <option value="Austria">Austria</option>
-                <option value="Azerbaijan">Azerbaijan</option>
-                <option value="Bahrain">Bahrain</option>
-                <option value="Bangladesh">Bangladesh</option>
-                <option value="Barbados">Barbados</option>
-                <option value="Belarus">Belarus</option>
-                <option value="Belgium">Belgium</option>
-                <option value="Belgium-Luxembourg">Belgium-Luxembourg</option>
-                <option value="Belize">Belize</option>
-                <option value="Benin">Benin</option>
-                <option value="Bhutan">Bhutan</option>
-            </select>
+            <select onchange="reloadPriceCountry()" id="price-select"></select>
+            <input type="radio" name="line-type" id="line-type-0" value="0" onclick="reloadPrice(0)" checked> Producer Price 
+            <input type="radio" name="line-type" id="line-type-1" value="1" onclick="reloadPrice(1)"> Customer Price
+            <input type="radio" name="line-type" id="line-type-2" value="2" onclick="reloadPrice(2)"> Annual Growth<br>
         </div>
         <div>
-            <iframe src="line-chart?country=Afghanistan" width="100%" height="500px" frameborder="0" id='linechart'></iframe>
+            <iframe src="line-chart/index.html?type=0&country=Afghanistan" width="100%" height="380px" frameborder="0" id='linechart'></iframe>
         </div>
+    </div>
+    <div>
+        <h2>PCA</h2>
+        <iframe src="pca.html" width="100%" height="530px" frameborder="0"
+            id='linechart'></iframe>
     </div>
 </body>
 <script>
-    // window.parent.changeCountry(country);
+    var tradeType = 0
+    var priceType = 0
     function changeCountry(country) {
-            ((console && console.log) || alert)("zipphone = " + country);
-        // Set dropdown 
-        
-        document.getElementById('linechart').src = 'line-chart/index.html?country=' + country;
+        document.getElementById('trade-select').value = country
+        document.getElementById('price-select').value = country
+        reloadTradeCountry()
+        reloadPriceCountry()
     }
 
     function reloadMap(type){
-        // $('#worldmap').load('world-map/index.html?type='+type)
+        tradeType = type
         document.getElementById('worldmap').src = 'world-map/index.html?type=' + type;
-        // set bartype
-        //$('#bar-type').load('world-map/index.html?type=' + type)
+        if(type==0){
+            document.getElementById('bar-type-0').checked = true;
+            document.getElementById('bar-type-1').checked = false;
+        } else {
+            document.getElementById('bar-type-0').checked = false;
+            document.getElementById('bar-type-1').checked = true;
+        }
+        reloadTradeCountry()
     }
 
-    function reloadCountry(){
+    function reloadBar(type){
+        tradeType = type
+        reloadTradeCountry()
 
+        if (type == 0) {
+            document.getElementById('type-0').checked = true;
+            document.getElementById('type-1').checked = false;
+        } else {
+            document.getElementById('type-0').checked = false;
+            document.getElementById('type-1').checked = true;
+        }
     }
+
+    function reloadPrice(type) {
+        priceType = type
+        var country = document.getElementById('price-select').value;
+        $("#price-select").empty();
+        var items = ppItems
+        if(type==1){
+            items = cpItems
+        } else if (type == 2){
+            items = agItems
+        }
+        $.each(items, function (i, items) {
+            $('#price-select').append($('<option>', {
+                value: items,
+                text: items
+            }));
+        });
+        document.getElementById('price-select').value = country
+        document.getElementById('linechart').src = 'line-chart/index.html?type=' + priceType + '&country=' + country;
+    }
+
+    function reloadTradeCountry(){
+        var country = document.getElementById('trade-select').value;
+        document.getElementById('price-select').value = country;
+        document.getElementById('stackbar').src = 'stack-bar/index.html?type=' + tradeType + '&country=' + country;
+        document.getElementById('linechart').src = 'line-chart/index.html?type=' + priceType + '&country=' + country;
+    }
+
+    function reloadPriceCountry() {
+        var country = document.getElementById('price-select').value;
+        document.getElementById('trade-select').value = country;
+        document.getElementById('linechart').src = 'line-chart/index.html?type=' + priceType + '&country=' + country;
+        document.getElementById('stackbar').src = 'stack-bar/index.html?type=' + tradeType + '&country=' + country;
+    }
+
+    var tradeItems = ['Afghanistan', 'Albania', 'Algeria', 'Angola',
+            'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia',
+            'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh',
+            'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan',
+            'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil',
+            'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde',
+            'Cambodia', 'Cameroon', 'Canada', 'Central African Rep.', 'Chad',
+            'Chile', 'China, Hong Kong SAR', 'China, Macao SAR', 'China',
+            'Taiwan', 'Colombia', 'Comoros', 'Congo', 'Cook Islands',
+            'Costa Rica', "Côte d'Ivoire", 'Croatia', 'Cuba', 'Cyprus',
+            'Czechia', 'North Korea', 'Dem. Rep. Congo', 'Denmark', 'Djibouti',
+            'Dominica', 'Dominican Rep.', 'Ecuador', 'Egypt', 'El Salvador',
+            'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia',
+            'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Polynesia',
+            'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece',
+            'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana',
+            'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia',
+            'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan',
+            'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait',
+            'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia',
+            'Libya', 'Lithuania', 'Luxembourg', 'Madagascar', 'Malawi',
+            'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania', 'Mauritius',
+            'Mexico', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique',
+            'Myanmar', 'Namibia', 'Nauru', 'Nepal', 'Netherlands',
+            'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria',
+            'Niue', 'North Macedonia', 'Norway', 'Oman', 'Pakistan',
+            'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru',
+            'Philippines', 'Poland', 'Portugal', 'Qatar', 'South Korea',
+            'Moldova', 'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis',
+            'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa',
+            'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia',
+            'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia',
+            'Solomon Islands', 'Somalia', 'South Africa', 'South Sudan',
+            'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland',
+            'Syria', 'Tajikistan', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga',
+            'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan',
+            'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates',
+            'United Kingdom', 'Tanzania', 'United States of America',
+            'Uruguay', 'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam',
+            'Yemen', 'Zambia', 'Zimbabwe']
+       
+    var ppItems = ['Afghanistan', 'Albania', 'Algeria', 'Angola',
+            'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia',
+            'Austria', 'Azerbaijan', 'Bangladesh', 'Barbados', 'Belarus',
+            'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia',
+            'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei',
+            'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia',
+            'Cameroon', 'Canada', 'Central African Rep.', 'Chad', 'Chile',
+            'China', 'China, Hong Kong SAR', 'China, mainland', 'Colombia',
+            'Congo', 'Cook Islands', 'Costa Rica', "Côte d'Ivoire", 'Croatia',
+            'Cuba', 'Cyprus', 'Czechia', 'Denmark', 'Dominican Rep.',
+            'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea',
+            'Estonia', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gambia',
+            'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guinea',
+            'Guinea-Bissau', 'Guyana', 'Honduras', 'Hungary', 'Iceland',
+            'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy',
+            'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kuwait',
+            'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lithuania',
+            'Luxembourg', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives',
+            'Mali', 'Malta', 'Mauritius', 'Mexico', 'Mongolia', 'Morocco',
+            'Mozambique', 'Myanmar', 'Namibia', 'Nepal', 'Netherlands',
+            'New Caledonia', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria',
+            'North Macedonia', 'Norway', 'Oman', 'Pakistan', 'Palestine',
+            'Panama', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal',
+            'Puerto Rico', 'Qatar', 'South Korea', 'Moldova', 'Romania',
+            'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia',
+            'Saint Vincent and the Grenadines', 'Samoa', 'Saudi Arabia',
+            'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
+            'Slovakia', 'Slovenia', 'South Africa', 'Spain', 'Sri Lanka',
+            'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Tajikistan',
+            'Thailand', 'Timor-Leste', 'Togo', 'Trinidad and Tobago',
+            'Tunisia', 'Turkey', 'Turkmenistan', 'Ukraine', 'United Kingdom',
+            'Tanzania', 'United States of America', 'Uruguay', 'Vanuatu',
+            'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe']
+    
+    var cpItems = ['Afghanistan', 'Åland Islands', 'Albania', 'Algeria', 'Andorra',
+            'Angola', 'Anguilla', 'Antigua and Barbuda', 'Argentina',
+            'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan',
+            'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus',
+            'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia',
+            'Bosnia and Herzegovina', 'Botswana', 'Brazil',
+            'British Virgin Islands', 'Brunei', 'Bulgaria', 'Burkina Faso',
+            'Burundi', 'Cabo Verde', 'Cambodia', 'Cameroon', 'Canada',
+            'Cayman Islands', 'Chad', 'Chile', 'China, Hong Kong SAR',
+            'China, Macao SAR', 'China', 'Colombia', 'Comoros', 'Congo',
+            'Cook Islands', 'Costa Rica', "Côte d'Ivoire", 'Croatia',
+            'Curaçao', 'Cyprus', 'Czechia', 'Dem. Rep. Congo', 'Denmark',
+            'Djibouti', 'Dominica', 'Dominican Rep.', 'Ecuador', 'Egypt',
+            'El Salvador', 'Equatorial Guinea', 'Estonia', 'Eswatini',
+            'Ethiopia', 'Fiji', 'Finland', 'France', 'French Polynesia',
+            'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece',
+            'Greenland', 'Grenada', 'Guadeloupe', 'Guam', 'Guatemala',
+            'Guinea', 'Guinea-Bissau', 'Haiti', 'Honduras', 'Hungary',
+            'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland',
+            'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan',
+            'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia',
+            'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Lithuania',
+            'Luxembourg', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives',
+            'Mali', 'Malta', 'Martinique', 'Mauritania', 'Mauritius', 'Mexico',
+            'Micronesia (Federated States of)', 'Mongolia', 'Montenegro',
+            'Montserrat', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia',
+            'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand',
+            'Nicaragua', 'Niger', 'Nigeria', 'North Macedonia', 'Norway',
+            'Oman', 'Pakistan', 'Palau', 'Palestine', 'Panama',
+            'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland',
+            'Portugal', 'Puerto Rico', 'Qatar', 'South Korea', 'Moldova',
+            'Réunion', 'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis',
+            'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa',
+            'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal',
+            'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia',
+            'Slovenia', 'Solomon Islands', 'South Africa', 'South Sudan',
+            'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland',
+            'Syria', 'Tajikistan', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga',
+            'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Uganda', 'Ukraine',
+            'United Arab Emirates', 'United Kingdom', 'Tanzania',
+            'United States of America', 'Uruguay', 'Uzbekistan', 'Vanuatu',
+            'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe']
+
+    var agItems = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola',
+            'Anguilla', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Aruba',
+            'Australia', 'Austria', 'Azerbaijan', 'Bahamas', 'Bahrain',
+            'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin',
+            'Bermuda', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina',
+            'Botswana', 'Brazil', 'British Virgin Islands', 'Brunei',
+            'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia',
+            'Cameroon', 'Canada', 'Cayman Islands', 'Central African Rep.',
+            'Chad', 'Chile', 'China', 'China, Hong Kong SAR',
+            'China, Macao SAR', 'China, mainland', 'Colombia', 'Comoros',
+            'Congo', 'Cook Islands', 'Costa Rica', "Côte d'Ivoire", 'Croatia',
+            'Cuba', 'Curaçao', 'Cyprus', 'Czechia', 'Czechoslovakia',
+            'North Korea', 'Dem. Rep. Congo', 'Denmark', 'Djibouti',
+            'Dominica', 'Dominican Rep.', 'Ecuador', 'Egypt', 'El Salvador',
+            'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia',
+            'Ethiopia PDR', 'Fiji', 'Finland', 'France', 'French Polynesia',
+            'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece',
+            'Greenland', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau',
+            'Guyana', 'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India',
+            'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy',
+            'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati',
+            'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho',
+            'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg',
+            'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta',
+            'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico',
+            'Micronesia (Federated States of)', 'Monaco', 'Mongolia',
+            'Montenegro', 'Montserrat', 'Morocco', 'Mozambique', 'Myanmar',
+            'Namibia', 'Nauru', 'Nepal', 'Netherlands',
+            'Netherlands Antilles (former)', 'New Caledonia', 'New Zealand',
+            'Nicaragua', 'Niger', 'Nigeria', 'North Macedonia', 'Norway',
+            'Oman', 'Pakistan', 'Palau', 'Palestine', 'Panama',
+            'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland',
+            'Portugal', 'Puerto Rico', 'Qatar', 'South Korea', 'Moldova',
+            'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis',
+            'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa',
+            'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal',
+            'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore',
+            'Sint Maarten (Dutch part)', 'Slovakia', 'Slovenia',
+            'Solomon Islands', 'Somalia', 'South Africa', 'South Sudan',
+            'Spain', 'Sri Lanka', 'Sudan', 'Sudan (former)', 'Suriname',
+            'Sweden', 'Switzerland', 'Syria', 'Tajikistan', 'Thailand',
+            'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia',
+            'Turkey', 'Turkmenistan', 'Turks and Caicos Islands', 'Tuvalu',
+            'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom',
+            'Tanzania', 'United States of America', 'Uruguay', 'USSR',
+            'Uzbekistan', 'Vanuatu', 'Venezuela', 'Vietnam', 'Yemen',
+            'Yemen Ar Rp', 'Yemen Dem', 'Yugoslav SFR', 'Zambia', 'Zimbabwe']
+
+    $.each(tradeItems, function (i, tradeItems) {
+        $('#trade-select').append($('<option>', {
+            value: tradeItems,
+            text: tradeItems
+        }));
+    });
+
+    $.each(ppItems, function (i, ppItems) {
+            $('#price-select').append($('<option>', {
+                value: ppItems,
+                text: ppItems
+            }));
+        });
 </script>
 </html>

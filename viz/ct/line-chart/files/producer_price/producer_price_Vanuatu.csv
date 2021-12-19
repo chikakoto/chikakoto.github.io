@@ -1,0 +1,106 @@
+,symbol,date,price
+36465,Cereals,Jan 1 1999,38.01
+36466,Cereals,Jan 1 2000,38.01
+36467,Cereals,Jan 1 2001,38.01
+36468,Cereals,Jan 1 2002,38.01
+36469,Cereals,Jan 1 2003,57.02
+36470,Cereals,Jan 1 2004,57.02
+36471,Cereals,Jan 1 2005,57.02
+36472,Cereals,Jan 1 2006,57.02
+36473,Cereals,Jan 1 2007,76.02
+36474,Cereals,Jan 1 2008,76.02
+36475,Cereals,Jan 1 2009,76.02
+36476,Cereals,Jan 1 2010,87.38
+36477,Cereals,Jan 1 2011,102.81
+36478,Cereals,Jan 1 2012,108.51
+36479,Cereals,Jan 1 2013,106.12
+36480,Cereals,Jan 1 2014,104.34
+36481,Cereals,Jan 1 2015,99.03
+36482,Cereals,Jan 1 2016,96.62
+36483,Cereals,Jan 1 2017,102.91
+36484,Cereals,Jan 1 2018,104.19
+36485,Cereals,Jan 1 2019,107.53
+36486,Coarse Grain,Jan 1 1999,38.01
+36487,Coarse Grain,Jan 1 2000,38.01
+36488,Coarse Grain,Jan 1 2001,38.01
+36489,Coarse Grain,Jan 1 2002,38.01
+36490,Coarse Grain,Jan 1 2003,57.02
+36491,Coarse Grain,Jan 1 2004,57.02
+36492,Coarse Grain,Jan 1 2005,57.02
+36493,Coarse Grain,Jan 1 2006,57.02
+36494,Coarse Grain,Jan 1 2007,76.02
+36495,Coarse Grain,Jan 1 2008,76.02
+36496,Coarse Grain,Jan 1 2009,76.02
+36497,Coarse Grain,Jan 1 2010,87.38
+36498,Coarse Grain,Jan 1 2011,102.81
+36499,Coarse Grain,Jan 1 2012,108.51
+36500,Coarse Grain,Jan 1 2013,106.12
+36501,Coarse Grain,Jan 1 2014,104.34
+36502,Coarse Grain,Jan 1 2015,99.03
+36503,Coarse Grain,Jan 1 2016,96.62
+36504,Coarse Grain,Jan 1 2017,102.91
+36505,Coarse Grain,Jan 1 2018,104.19
+36506,Coarse Grain,Jan 1 2019,107.53
+36507,Fruit,Jan 1 1999,54.97
+36508,Fruit,Jan 1 2000,54.97
+36509,Fruit,Jan 1 2001,54.97
+36510,Fruit,Jan 1 2002,54.97
+36511,Fruit,Jan 1 2003,70.68
+36512,Fruit,Jan 1 2004,70.68
+36513,Fruit,Jan 1 2005,70.68
+36514,Fruit,Jan 1 2006,70.68
+36515,Fruit,Jan 1 2007,76.02
+36516,Fruit,Jan 1 2008,76.02
+36517,Fruit,Jan 1 2009,76.02
+36518,Fruit,Jan 1 2010,87.38
+36519,Fruit,Jan 1 2011,102.81
+36520,Fruit,Jan 1 2012,108.51
+36521,Fruit,Jan 1 2013,106.12
+36522,Fruit,Jan 1 2014,104.34
+36523,Fruit,Jan 1 2015,99.03
+36524,Fruit,Jan 1 2016,96.62
+36525,Fruit,Jan 1 2017,102.91
+36526,Fruit,Jan 1 2018,104.19
+36527,Fruit,Jan 1 2019,107.52
+36528,Roots and Tubers,Jan 1 1999,76.02
+36529,Roots and Tubers,Jan 1 2000,76.02
+36530,Roots and Tubers,Jan 1 2001,76.02
+36531,Roots and Tubers,Jan 1 2002,76.02
+36532,Roots and Tubers,Jan 1 2003,76.02
+36533,Roots and Tubers,Jan 1 2004,76.02
+36534,Roots and Tubers,Jan 1 2005,76.02
+36535,Roots and Tubers,Jan 1 2006,76.02
+36536,Roots and Tubers,Jan 1 2007,76.02
+36537,Roots and Tubers,Jan 1 2008,76.02
+36538,Roots and Tubers,Jan 1 2009,76.02
+36539,Roots and Tubers,Jan 1 2010,87.38
+36540,Roots and Tubers,Jan 1 2011,102.81
+36541,Roots and Tubers,Jan 1 2012,108.51
+36542,Roots and Tubers,Jan 1 2013,106.12
+36543,Roots and Tubers,Jan 1 2014,104.34
+36544,Roots and Tubers,Jan 1 2015,99.03
+36545,Roots and Tubers,Jan 1 2016,96.62
+36546,Roots and Tubers,Jan 1 2017,102.91
+36547,Roots and Tubers,Jan 1 2018,104.19
+36548,Roots and Tubers,Jan 1 2019,107.52
+36549,Vegetables,Jan 1 1999,38.01
+36550,Vegetables,Jan 1 2000,38.01
+36551,Vegetables,Jan 1 2001,38.01
+36552,Vegetables,Jan 1 2002,38.01
+36553,Vegetables,Jan 1 2003,57.02
+36554,Vegetables,Jan 1 2004,57.02
+36555,Vegetables,Jan 1 2005,57.02
+36556,Vegetables,Jan 1 2006,57.02
+36557,Vegetables,Jan 1 2007,76.02
+36558,Vegetables,Jan 1 2008,76.02
+36559,Vegetables,Jan 1 2009,76.02
+36560,Vegetables,Jan 1 2010,87.38
+36561,Vegetables,Jan 1 2011,102.81
+36562,Vegetables,Jan 1 2012,108.51
+36563,Vegetables,Jan 1 2013,106.12
+36564,Vegetables,Jan 1 2014,104.34
+36565,Vegetables,Jan 1 2015,99.03
+36566,Vegetables,Jan 1 2016,96.62
+36567,Vegetables,Jan 1 2017,102.91
+36568,Vegetables,Jan 1 2018,104.19
+36569,Vegetables,Jan 1 2019,107.53

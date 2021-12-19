@@ -5,67 +5,16 @@ import define2 from "./45e5909f35596963@476.js";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const country = urlParams.get('country')
-const file = "https://chikakoto.github.io/viz/ct/line-chart/files/test.csv"
-const jsonFile = "input.json"
-//console.log(file)
-// const input = file.files[0];
-//const reader = new FileReader();
-//csv = reader.readAsText(file);
-//console.log(csv)
-
-//
-function readTextFile(file)
-{
-  var rawFile = new XMLHttpRequest();
-  rawFile.open("GET", file, true);
-  rawFile.onreadystatechange = function ()
-  {
-    if(rawFile.readyState === 4)
-    {
-      if(rawFile.status === 200 || rawFile.status == 0)
-      {
-        var allText = rawFile.responseText;
-        var arr = csv_To_Array(allText).filter(d => d.country == country )
-        var json = JSON.stringify(arr)
-        
-        var fs = require('fs');
-        fs.writeFile (jsonFile, json, function(err) {
-          if (err) throw err;
-            console.log('complete');
-          }
-        );
-        // var data = json.filter(function (entry) {
-        //   console.log(country)
-        //   return entry.country == country
-        // })
-        console.log(json);
-      }
-    }
-  }
-  rawFile.send(null);
+const type = urlParams.get('type')
+let file = "./files/producer_price/producer_price_" + country + ".csv";
+let label = ["Cereals", "Citrus Fruit", "Coarse Grain", "Fruit", "Meat", "Milk", "Pulses", "Roots and Tubers", "Treenuts", "Vegetables"]
+if (type == 1) {
+  file = "./files/consumer_price/consumer_price_" + country + ".csv";
+  label = ["Food Indices", "General Indices"]
+} else if (type == 2) {
+  file = "./files/annual_growth/annual_growth_" + country + ".csv"
+  label = ["Annual growth %"]
 }
-
-// readTextFile( file );
-
-function csv_To_Array(str, delimiter = ",") {
-  const header_cols = str.slice(0, str.indexOf("\n")).split(delimiter);
-  const row_data = str.slice(str.indexOf("\n") + 1).split("\n");
-  const arr = row_data.map(function (row) {
-    const values = row.split(delimiter);
-    const el = header_cols.reduce(function (object, header, index) {
-      object[header] = values[index];
-      return object;
-    }, {});
-    return el;
-  });
-
-  // return the array
-  return arr;
-}
-
-
-
-
 
 //
 export default function define(runtime, observer) {
@@ -91,6 +40,9 @@ export default function define(runtime, observer) {
     vl.color().fieldN("symbol")    
   );
     
+  var arr = [vl.fieldT("date")]
+  arr = arr.concat(label)
+    
   // The rule helps as a proxy for the hover. We draw rules all over the chart
   // so we can easily find the nearest one. We then hide them using opacity 0
   const rule =vl.markRule({ strokeWidth: 0.5, tooltip: true })
@@ -101,7 +53,7 @@ export default function define(runtime, observer) {
     )
     .encode(
       vl.opacity().value(0).if(hover, vl.value(0.7)),
-      vl.tooltip([vl.fieldT("date"), "Africa", "Americas", "Asia", "Europe", "Oceania"])
+      vl.tooltip(arr)
     )    
     .select(hover);
  
@@ -109,7 +61,7 @@ export default function define(runtime, observer) {
     .layer(lineAndPoint, rule )
     .encode(vl.x().fieldT("date"))
     .data(file)
-    .width(width - 150)
+    .width(width - 200)
     .height(300)
     .render();
 }
