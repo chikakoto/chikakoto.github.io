@@ -25,7 +25,7 @@ export default function define(runtime, observer) {
   svg.selectAll('g')
     .data( data.categories.slice(0) )
     .join('g')
-      .attr('transform', (d,i) => `translate(${i * 140},5)`)
+      .attr('transform', (d,i) => `translate(${i * 160},5)`)
     .call(g => g
        .append('rect')
          .attr('width', 20)
@@ -39,7 +39,7 @@ export default function define(runtime, observer) {
          .attr('x', 25)
          .attr('dy', '0.35em')
          .style('font-size', 10)
-         .style('font-family', 'sans-serif')
+         .style('font-size-adjust', 0.4)
        .text(d => d[0] + d.slice(1).toLowerCase())
      )
   
@@ -198,7 +198,7 @@ d3.scaleOrdinal(
   main.variable(observer("xScale")).define("xScale", ["d3","data"], function(d3,data){return(
 d3.scaleBand(
   data.map(d => d.location),
-  [ 80, 1400]
+  [ 100, 1200]
 ).padding(0.2)
 )});
   main.variable(observer("yScale")).define("yScale", ["d3","data"], function(d3,data){return(
