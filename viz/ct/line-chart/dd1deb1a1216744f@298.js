@@ -10,10 +10,10 @@ let file = "https://chikakoto.github.io/viz/ct/line-chart/files/producer_price/p
 let label = ["Cereals", "Citrus Fruit", "Coarse Grain", "Fruit", "Meat", "Milk", "Pulses", "Roots and Tubers", "Treenuts", "Vegetables"]
 if (type == 1) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/consumer_price/consumer_price_" + country + ".csv";
-  label = ["Food Indices", "General Indices"]
+  label = ["Food Indices (2015=100)", "General Indices (2015=100)"]
 } else if (type == 2) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/gdp/gdp_" + country + ".csv"
-  label = ["Value US$"]
+  label = ["Value US$ per capita"]
 } else if (type == 3) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/annual_growth/annual_growth_" + country + ".csv"
   label = ["Annual growth %"]

@@ -1,51 +1,51 @@
 ,symbol,date,price
-200,Value US$,Jan 1 1970,646.453255
-201,Value US$,Jan 1 1971,663.549474
-202,Value US$,Jan 1 1972,656.645735
-203,Value US$,Jan 1 1973,772.270809
-204,Value US$,Jan 1 1974,832.409513
-205,Value US$,Jan 1 1975,590.599928
-206,Value US$,Jan 1 1976,546.98879
-207,Value US$,Jan 1 1977,576.767067
-208,Value US$,Jan 1 1978,622.097668
-209,Value US$,Jan 1 1979,667.824648
-210,Value US$,Jan 1 1980,857.527482
-211,Value US$,Jan 1 1981,773.679835
-212,Value US$,Jan 1 1982,746.674429
-213,Value US$,Jan 1 1983,752.930459
-214,Value US$,Jan 1 1984,768.283558
-215,Value US$,Jan 1 1985,915.975131
-216,Value US$,Jan 1 1986,829.130782
-217,Value US$,Jan 1 1987,922.448701
-218,Value US$,Jan 1 1988,960.336531
-219,Value US$,Jan 1 1989,1079.648852
-220,Value US$,Jan 1 1990,1153.802713
-221,Value US$,Jan 1 1991,1321.688976
-222,Value US$,Jan 1 1992,1468.447346
-223,Value US$,Jan 1 1993,1030.049917
-224,Value US$,Jan 1 1994,1026.435417
-225,Value US$,Jan 1 1995,476.309142
-226,Value US$,Jan 1 1996,605.926263
-227,Value US$,Jan 1 1997,687.673908
-228,Value US$,Jan 1 1998,561.068467
-229,Value US$,Jan 1 1999,518.513772
-230,Value US$,Jan 1 2000,744.556413
-231,Value US$,Jan 1 2001,705.108899
-232,Value US$,Jan 1 2002,872.494358
-233,Value US$,Jan 1 2003,982.960862
-234,Value US$,Jan 1 2004,1255.563695
-235,Value US$,Jan 1 2005,1902.420255
-236,Value US$,Jan 1 2006,2599.567368
-237,Value US$,Jan 1 2007,3121.993897
-238,Value US$,Jan 1 2008,4080.943884
-239,Value US$,Jan 1 2009,3122.782079
-240,Value US$,Jan 1 2010,3587.883041
-241,Value US$,Jan 1 2011,4615.470485
-242,Value US$,Jan 1 2012,5100.09819
-243,Value US$,Jan 1 2013,5254.883253
-244,Value US$,Jan 1 2014,5408.409568
-245,Value US$,Jan 1 2015,4166.979626
-246,Value US$,Jan 1 2016,3506.071546
-247,Value US$,Jan 1 2017,4095.811686
-248,Value US$,Jan 1 2018,3289.643374
-249,Value US$,Jan 1 2019,2670.850732
+200,Value US$ per capita,Jan 1 1970,646.453255
+201,Value US$ per capita,Jan 1 1971,663.549474
+202,Value US$ per capita,Jan 1 1972,656.645735
+203,Value US$ per capita,Jan 1 1973,772.270809
+204,Value US$ per capita,Jan 1 1974,832.409513
+205,Value US$ per capita,Jan 1 1975,590.599928
+206,Value US$ per capita,Jan 1 1976,546.98879
+207,Value US$ per capita,Jan 1 1977,576.767067
+208,Value US$ per capita,Jan 1 1978,622.097668
+209,Value US$ per capita,Jan 1 1979,667.824648
+210,Value US$ per capita,Jan 1 1980,857.527482
+211,Value US$ per capita,Jan 1 1981,773.679835
+212,Value US$ per capita,Jan 1 1982,746.674429
+213,Value US$ per capita,Jan 1 1983,752.930459
+214,Value US$ per capita,Jan 1 1984,768.283558
+215,Value US$ per capita,Jan 1 1985,915.975131
+216,Value US$ per capita,Jan 1 1986,829.130782
+217,Value US$ per capita,Jan 1 1987,922.448701
+218,Value US$ per capita,Jan 1 1988,960.336531
+219,Value US$ per capita,Jan 1 1989,1079.648852
+220,Value US$ per capita,Jan 1 1990,1153.802713
+221,Value US$ per capita,Jan 1 1991,1321.688976
+222,Value US$ per capita,Jan 1 1992,1468.447346
+223,Value US$ per capita,Jan 1 1993,1030.049917
+224,Value US$ per capita,Jan 1 1994,1026.435417
+225,Value US$ per capita,Jan 1 1995,476.309142
+226,Value US$ per capita,Jan 1 1996,605.926263
+227,Value US$ per capita,Jan 1 1997,687.673908
+228,Value US$ per capita,Jan 1 1998,561.068467
+229,Value US$ per capita,Jan 1 1999,518.513772
+230,Value US$ per capita,Jan 1 2000,744.556413
+231,Value US$ per capita,Jan 1 2001,705.108899
+232,Value US$ per capita,Jan 1 2002,872.494358
+233,Value US$ per capita,Jan 1 2003,982.960862
+234,Value US$ per capita,Jan 1 2004,1255.563695
+235,Value US$ per capita,Jan 1 2005,1902.420255
+236,Value US$ per capita,Jan 1 2006,2599.567368
+237,Value US$ per capita,Jan 1 2007,3121.993897
+238,Value US$ per capita,Jan 1 2008,4080.943884
+239,Value US$ per capita,Jan 1 2009,3122.782079
+240,Value US$ per capita,Jan 1 2010,3587.883041
+241,Value US$ per capita,Jan 1 2011,4615.470485
+242,Value US$ per capita,Jan 1 2012,5100.09819
+243,Value US$ per capita,Jan 1 2013,5254.883253
+244,Value US$ per capita,Jan 1 2014,5408.409568
+245,Value US$ per capita,Jan 1 2015,4166.979626
+246,Value US$ per capita,Jan 1 2016,3506.071546
+247,Value US$ per capita,Jan 1 2017,4095.811686
+248,Value US$ per capita,Jan 1 2018,3289.643374
+249,Value US$ per capita,Jan 1 2019,2670.850732

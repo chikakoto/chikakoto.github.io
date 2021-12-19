@@ -1,517 +1,517 @@
 ,symbol,date,price
-55212,Food Indices,Jan 1 2000,61.8202
-55213,Food Indices,Jan 1 2001,60.9874
-55214,Food Indices,Jan 1 2002,65.5864
-55215,Food Indices,Jan 1 2003,60.8648
-55216,Food Indices,Jan 1 2004,59.8789
-55217,Food Indices,Jan 1 2005,62.8694
-55218,Food Indices,Jan 1 2006,65.651
-55219,Food Indices,Jan 1 2007,71.1899
-55220,Food Indices,Jan 1 2008,82.5374
-55221,Food Indices,Jan 1 2009,91.403
-55222,Food Indices,Jan 1 2010,86.7491
-55223,Food Indices,Jan 1 2011,92.1589
-55224,Food Indices,Jan 1 2012,97.2125
-55225,Food Indices,Jan 1 2013,99.8866
-55226,Food Indices,Jan 1 2014,100.796
-55227,Food Indices,Jan 1 2015,100.3656
-55228,Food Indices,Jan 1 2016,100.3368
-55229,Food Indices,Jan 1 2017,103.9396
-55230,Food Indices,Jan 1 2018,107.5198
-55231,Food Indices,Jan 1 2019,107.2107
-55232,Food Indices,Jan 1 2020,111.7975
-55233,Food Indices,Jan 1 2021,111.5814
-55234,Food Indices,Feb 1 2000,61.3823
-55235,Food Indices,Feb 1 2001,61.6928
-55236,Food Indices,Feb 1 2002,65.1552
-55237,Food Indices,Feb 1 2003,60.4159
-55238,Food Indices,Feb 1 2004,59.7578
-55239,Food Indices,Feb 1 2005,63.251
-55240,Food Indices,Feb 1 2006,65.964
-55241,Food Indices,Feb 1 2007,71.6844
-55242,Food Indices,Feb 1 2008,83.9878
-55243,Food Indices,Feb 1 2009,91.4658
-55244,Food Indices,Feb 1 2010,86.6695
-55245,Food Indices,Feb 1 2011,93.4621
-55246,Food Indices,Feb 1 2012,97.5766
-55247,Food Indices,Feb 1 2013,100.0352
-55248,Food Indices,Feb 1 2014,101.1664
-55249,Food Indices,Feb 1 2015,100.0745
-55250,Food Indices,Feb 1 2016,100.6019
-55251,Food Indices,Feb 1 2017,104.9814
-55252,Food Indices,Feb 1 2018,106.9353
-55253,Food Indices,Feb 1 2019,107.8143
-55254,Food Indices,Feb 1 2020,112.1628
-55255,Food Indices,Feb 1 2021,111.5944
-55256,Food Indices,Mar 1 2000,60.8391
-55257,Food Indices,Mar 1 2001,62.3692
-55258,Food Indices,Mar 1 2002,64.1744
-55259,Food Indices,Mar 1 2003,60.6307
-55260,Food Indices,Mar 1 2004,60.0996
-55261,Food Indices,Mar 1 2005,63.7391
-55262,Food Indices,Mar 1 2006,66.112
-55263,Food Indices,Mar 1 2007,72.1016
-55264,Food Indices,Mar 1 2008,85.1506
-55265,Food Indices,Mar 1 2009,91.2582
-55266,Food Indices,Mar 1 2010,86.892
-55267,Food Indices,Mar 1 2011,94.6319
-55268,Food Indices,Mar 1 2012,98.6954
-55269,Food Indices,Mar 1 2013,100.4027
-55270,Food Indices,Mar 1 2014,101.3607
-55271,Food Indices,Mar 1 2015,99.6294
-55272,Food Indices,Mar 1 2016,101.1404
-55273,Food Indices,Mar 1 2017,104.0563
-55274,Food Indices,Mar 1 2018,106.4212
-55275,Food Indices,Mar 1 2019,108.3656
-55276,Food Indices,Mar 1 2020,112.2214
-55277,Food Indices,Mar 1 2021,112.0806
-55278,Food Indices,Apr 1 2000,60.5401
-55279,Food Indices,Apr 1 2001,62.8016
-55280,Food Indices,Apr 1 2002,63.5248
-55281,Food Indices,Apr 1 2003,60.7819
-55282,Food Indices,Apr 1 2004,60.3392
-55283,Food Indices,Apr 1 2005,63.8438
-55284,Food Indices,Apr 1 2006,66.7597
-55285,Food Indices,Apr 1 2007,73.5371
-55286,Food Indices,Apr 1 2008,86.419
-55287,Food Indices,Apr 1 2009,90.8008
-55288,Food Indices,Apr 1 2010,87.5947
-55289,Food Indices,Apr 1 2011,96.6792
-55290,Food Indices,Apr 1 2012,99.3323
-55291,Food Indices,Apr 1 2013,100.5182
-55292,Food Indices,Apr 1 2014,101.7218
-55293,Food Indices,Apr 1 2015,101.065
-55294,Food Indices,Apr 1 2016,102.6584
-55295,Food Indices,Apr 1 2017,104.6959
-55296,Food Indices,Apr 1 2018,107.553
-55297,Food Indices,Apr 1 2019,109.915
-55298,Food Indices,Apr 1 2020,113.662
-55299,Food Indices,Apr 1 2021,113.5354
-55300,Food Indices,May 1 2000,60.1689
-55301,Food Indices,May 1 2001,63.062
-55302,Food Indices,May 1 2002,62.6845
-55303,Food Indices,May 1 2003,60.5035
-55304,Food Indices,May 1 2004,61.5875
-55305,Food Indices,May 1 2005,64.3763
-55306,Food Indices,May 1 2006,67.4651
-55307,Food Indices,May 1 2007,73.7515
-55308,Food Indices,May 1 2008,87.1323
-55309,Food Indices,May 1 2009,90.2345
-55310,Food Indices,May 1 2010,88.1232
-55311,Food Indices,May 1 2011,97.9441
-55312,Food Indices,May 1 2012,98.8391
-55313,Food Indices,May 1 2013,101.2982
-55314,Food Indices,May 1 2014,101.68
-55315,Food Indices,May 1 2015,101.2711
-55316,Food Indices,May 1 2016,102.2898
-55317,Food Indices,May 1 2017,104.3767
-55318,Food Indices,May 1 2018,107.1402
-55319,Food Indices,May 1 2019,110.2385
-55320,Food Indices,May 1 2020,113.3651
-55321,Food Indices,May 1 2021,114.2025
-55322,Food Indices,Jun 1 2000,61.0178
-55323,Food Indices,Jun 1 2001,63.7413
-55324,Food Indices,Jun 1 2002,62.2663
-55325,Food Indices,Jun 1 2003,60.9433
-55326,Food Indices,Jun 1 2004,61.6575
-55327,Food Indices,Jun 1 2005,63.9737
-55328,Food Indices,Jun 1 2006,67.7087
-55329,Food Indices,Jun 1 2007,73.8789
-55330,Food Indices,Jun 1 2008,87.8123
-55331,Food Indices,Jun 1 2009,88.7299
-55332,Food Indices,Jun 1 2010,88.0988
-55333,Food Indices,Jun 1 2011,97.1257
-55334,Food Indices,Jun 1 2012,98.7282
-55335,Food Indices,Jun 1 2013,101.0463
-55336,Food Indices,Jun 1 2014,101.4419
-55337,Food Indices,Jun 1 2015,100.4776
-55338,Food Indices,Jun 1 2016,101.4273
-55339,Food Indices,Jun 1 2017,104.0354
-55340,Food Indices,Jun 1 2018,106.2497
-55341,Food Indices,Jun 1 2019,109.6637
-55342,Food Indices,Jun 1 2020,112.9234
-55343,Food Indices,Jun 1 2021,113.831
-55344,Food Indices,Jul 1 2000,60.759
-55345,Food Indices,Jul 1 2001,62.9437
-55346,Food Indices,Jul 1 2002,61.7108
-55347,Food Indices,Jul 1 2003,59.8979
-55348,Food Indices,Jul 1 2004,62.5675
-55349,Food Indices,Jul 1 2005,63.3338
-55350,Food Indices,Jul 1 2006,67.9202
-55351,Food Indices,Jul 1 2007,74.6696
-55352,Food Indices,Jul 1 2008,88.2
-55353,Food Indices,Jul 1 2009,87.8629
-55354,Food Indices,Jul 1 2010,88.0185
-55355,Food Indices,Jul 1 2011,96.2641
-55356,Food Indices,Jul 1 2012,98.5511
-55357,Food Indices,Jul 1 2013,100.2213
-55358,Food Indices,Jul 1 2014,101.1499
-55359,Food Indices,Jul 1 2015,99.7902
-55360,Food Indices,Jul 1 2016,101.0717
-55361,Food Indices,Jul 1 2017,103.9928
-55362,Food Indices,Jul 1 2018,105.4822
-55363,Food Indices,Jul 1 2019,110.3443
-55364,Food Indices,Jul 1 2020,111.5719
-55365,Food Indices,Aug 1 2000,60.136
-55366,Food Indices,Aug 1 2001,62.7511
-55367,Food Indices,Aug 1 2002,60.9965
-55368,Food Indices,Aug 1 2003,58.9108
-55369,Food Indices,Aug 1 2004,62.0003
-55370,Food Indices,Aug 1 2005,63.188
-55371,Food Indices,Aug 1 2006,67.806
-55372,Food Indices,Aug 1 2007,74.8949
-55373,Food Indices,Aug 1 2008,88.191
-55374,Food Indices,Aug 1 2009,86.811
-55375,Food Indices,Aug 1 2010,87.6872
-55376,Food Indices,Aug 1 2011,95.1518
-55377,Food Indices,Aug 1 2012,97.9299
-55378,Food Indices,Aug 1 2013,99.1448
-55379,Food Indices,Aug 1 2014,99.9995
-55380,Food Indices,Aug 1 2015,98.7052
-55381,Food Indices,Aug 1 2016,100.4302
-55382,Food Indices,Aug 1 2017,104.0627
-55383,Food Indices,Aug 1 2018,104.472
-55384,Food Indices,Aug 1 2019,109.7721
-55385,Food Indices,Aug 1 2020,111.3532
-55386,Food Indices,Sep 1 2000,59.8797
-55387,Food Indices,Sep 1 2001,62.4857
-55388,Food Indices,Sep 1 2002,60.0265
-55389,Food Indices,Sep 1 2003,58.711
-55390,Food Indices,Sep 1 2004,61.8664
-55391,Food Indices,Sep 1 2005,63.3643
-55392,Food Indices,Sep 1 2006,67.9339
-55393,Food Indices,Sep 1 2007,76.5517
-55394,Food Indices,Sep 1 2008,88.5741
-55395,Food Indices,Sep 1 2009,86.835
-55396,Food Indices,Sep 1 2010,88.6432
-55397,Food Indices,Sep 1 2011,95.5972
-55398,Food Indices,Sep 1 2012,98.3607
-55399,Food Indices,Sep 1 2013,99.8543
-55400,Food Indices,Sep 1 2014,100.7581
-55401,Food Indices,Sep 1 2015,99.5357
-55402,Food Indices,Sep 1 2016,100.7531
-55403,Food Indices,Sep 1 2017,105.4574
-55404,Food Indices,Sep 1 2018,106.4717
-55405,Food Indices,Sep 1 2019,110.364
-55406,Food Indices,Sep 1 2020,112.1482
-55407,Food Indices,Oct 1 2000,59.9574
-55408,Food Indices,Oct 1 2001,62.7812
-55409,Food Indices,Oct 1 2002,60.3519
-55410,Food Indices,Oct 1 2003,59.0854
-55411,Food Indices,Oct 1 2004,61.7292
-55412,Food Indices,Oct 1 2005,63.8045
-55413,Food Indices,Oct 1 2006,68.588
-55414,Food Indices,Oct 1 2007,79.4043
-55415,Food Indices,Oct 1 2008,89.328
-55416,Food Indices,Oct 1 2009,86.3832
-55417,Food Indices,Oct 1 2010,89.4912
-55418,Food Indices,Oct 1 2011,95.4716
-55419,Food Indices,Oct 1 2012,98.2897
-55420,Food Indices,Oct 1 2013,99.5581
-55421,Food Indices,Oct 1 2014,100.2006
-55422,Food Indices,Oct 1 2015,100.0498
-55423,Food Indices,Oct 1 2016,100.4508
-55424,Food Indices,Oct 1 2017,106.041
-55425,Food Indices,Oct 1 2018,106.2529
-55426,Food Indices,Oct 1 2019,110.0681
-55427,Food Indices,Oct 1 2020,111.3147
-55428,Food Indices,Nov 1 2000,60.1514
-55429,Food Indices,Nov 1 2001,63.0603
-55430,Food Indices,Nov 1 2002,60.2773
-55431,Food Indices,Nov 1 2003,59.5528
-55432,Food Indices,Nov 1 2004,61.9526
-55433,Food Indices,Nov 1 2005,64.3737
-55434,Food Indices,Nov 1 2006,69.5342
-55435,Food Indices,Nov 1 2007,80.2687
-55436,Food Indices,Nov 1 2008,89.6106
-55437,Food Indices,Nov 1 2009,86.2859
-55438,Food Indices,Nov 1 2010,90.0312
-55439,Food Indices,Nov 1 2011,95.912
-55440,Food Indices,Nov 1 2012,98.7099
-55441,Food Indices,Nov 1 2013,99.4923
-55442,Food Indices,Nov 1 2014,100.2142
-55443,Food Indices,Nov 1 2015,99.8932
-55444,Food Indices,Nov 1 2016,100.8699
-55445,Food Indices,Nov 1 2017,105.7415
-55446,Food Indices,Nov 1 2018,105.65
-55447,Food Indices,Nov 1 2019,110.0264
-55448,Food Indices,Nov 1 2020,110.6916
-55449,Food Indices,Dec 1 2000,60.6874
-55450,Food Indices,Dec 1 2001,64.4319
-55451,Food Indices,Dec 1 2002,61.0255
-55452,Food Indices,Dec 1 2003,59.8384
-55453,Food Indices,Dec 1 2004,62.7004
-55454,Food Indices,Dec 1 2005,64.873
-55455,Food Indices,Dec 1 2006,70.1551
-55456,Food Indices,Dec 1 2007,81.0341
-55457,Food Indices,Dec 1 2008,89.8531
-55458,Food Indices,Dec 1 2009,85.9069
-55459,Food Indices,Dec 1 2010,91.1509
-55460,Food Indices,Dec 1 2011,96.1719
-55461,Food Indices,Dec 1 2012,99.2905
-55462,Food Indices,Dec 1 2013,99.7419
-55463,Food Indices,Dec 1 2014,99.9379
-55464,Food Indices,Dec 1 2015,99.1427
-55465,Food Indices,Dec 1 2016,102.7698
-55466,Food Indices,Dec 1 2017,106.6792
-55467,Food Indices,Dec 1 2018,106.0702
-55468,Food Indices,Dec 1 2019,109.8271
-55469,Food Indices,Dec 1 2020,110.1011
-55470,General Indices,Jan 1 2000,69.3462
-55471,General Indices,Jan 1 2001,69.1432
-55472,General Indices,Jan 1 2002,71.392
-55473,General Indices,Jan 1 2003,69.9995
-55474,General Indices,Jan 1 2004,69.085
-55475,General Indices,Jan 1 2005,71.0819
-55476,General Indices,Jan 1 2006,73.543
-55477,General Indices,Jan 1 2007,76.5077
-55478,General Indices,Jan 1 2008,84.0625
-55479,General Indices,Jan 1 2009,92.1617
-55480,General Indices,Jan 1 2010,92.031
-55481,General Indices,Jan 1 2011,94.7232
-55482,General Indices,Jan 1 2012,97.9019
-55483,General Indices,Jan 1 2013,100.4927
-55484,General Indices,Jan 1 2014,100.6537
-55485,General Indices,Jan 1 2015,99.13
-55486,General Indices,Jan 1 2016,100.0147
-55487,General Indices,Jan 1 2017,102.3231
-55488,General Indices,Jan 1 2018,106.4272
-55489,General Indices,Jan 1 2019,108.2849
-55490,General Indices,Jan 1 2020,111.501
-55491,General Indices,Jan 1 2021,111.8332
-55492,General Indices,Feb 1 2000,69.3486
-55493,General Indices,Feb 1 2001,69.2547
-55494,General Indices,Feb 1 2002,71.2302
-55495,General Indices,Feb 1 2003,69.82
-55496,General Indices,Feb 1 2004,68.9236
-55497,General Indices,Feb 1 2005,71.2059
-55498,General Indices,Feb 1 2006,73.5772
-55499,General Indices,Feb 1 2007,76.7463
-55500,General Indices,Feb 1 2008,85.0022
-55501,General Indices,Feb 1 2009,92.416
-55502,General Indices,Feb 1 2010,91.9807
-55503,General Indices,Feb 1 2011,94.7972
-55504,General Indices,Feb 1 2012,98.2934
-55505,General Indices,Feb 1 2013,100.4466
-55506,General Indices,Feb 1 2014,100.6094
-55507,General Indices,Feb 1 2015,98.8037
-55508,General Indices,Feb 1 2016,99.6948
-55509,General Indices,Feb 1 2017,102.6767
-55510,General Indices,Feb 1 2018,106.244
-55511,General Indices,Feb 1 2019,108.4233
-55512,General Indices,Feb 1 2020,111.4443
-55513,General Indices,Feb 1 2021,112.075
-55514,General Indices,Mar 1 2000,69.2006
-55515,General Indices,Mar 1 2001,69.6317
-55516,General Indices,Mar 1 2002,70.7634
-55517,General Indices,Mar 1 2003,69.9957
-55518,General Indices,Mar 1 2004,69.2734
-55519,General Indices,Mar 1 2005,71.5267
-55520,General Indices,Mar 1 2006,73.7588
-55521,General Indices,Mar 1 2007,77.1743
-55522,General Indices,Mar 1 2008,85.8649
-55523,General Indices,Mar 1 2009,92.4393
-55524,General Indices,Mar 1 2010,92.253
-55525,General Indices,Mar 1 2011,95.7548
-55526,General Indices,Mar 1 2012,99.2389
-55527,General Indices,Mar 1 2013,100.7634
-55528,General Indices,Mar 1 2014,100.9629
-55529,General Indices,Mar 1 2015,99.5614
-55530,General Indices,Mar 1 2016,100.7112
-55531,General Indices,Mar 1 2017,103.8371
-55532,General Indices,Mar 1 2018,106.6236
-55533,General Indices,Mar 1 2019,109.4406
-55534,General Indices,Mar 1 2020,111.3606
-55535,General Indices,Mar 1 2021,113.1832
-55536,General Indices,Apr 1 2000,69.1837
-55537,General Indices,Apr 1 2001,69.768
-55538,General Indices,Apr 1 2002,70.7315
-55539,General Indices,Apr 1 2003,70.0268
-55540,General Indices,Apr 1 2004,69.5732
-55541,General Indices,Apr 1 2005,71.7803
-55542,General Indices,Apr 1 2006,74.2703
-55543,General Indices,Apr 1 2007,77.8394
-55544,General Indices,Apr 1 2008,86.9284
-55545,General Indices,Apr 1 2009,92.3634
-55546,General Indices,Apr 1 2010,92.65
-55547,General Indices,Apr 1 2011,96.7562
-55548,General Indices,Apr 1 2012,99.8348
-55549,General Indices,Apr 1 2013,101.0692
-55550,General Indices,Apr 1 2014,101.2689
-55551,General Indices,Apr 1 2015,100.2157
-55552,General Indices,Apr 1 2016,101.239
-55553,General Indices,Apr 1 2017,104.8284
-55554,General Indices,Apr 1 2018,107.2826
-55555,General Indices,Apr 1 2019,110.323
-55556,General Indices,Apr 1 2020,111.451
-55557,General Indices,Apr 1 2021,114.236
-55558,General Indices,May 1 2000,68.9494
-55559,General Indices,May 1 2001,70.1704
-55560,General Indices,May 1 2002,70.484
-55561,General Indices,May 1 2003,69.9215
-55562,General Indices,May 1 2004,70.647
-55563,General Indices,May 1 2005,72.0109
-55564,General Indices,May 1 2006,74.5918
-55565,General Indices,May 1 2007,78.2091
-55566,General Indices,May 1 2008,87.6265
-55567,General Indices,May 1 2009,92.2175
-55568,General Indices,May 1 2010,92.8179
-55569,General Indices,May 1 2011,97.4754
-55570,General Indices,May 1 2012,99.8973
-55571,General Indices,May 1 2013,101.265
-55572,General Indices,May 1 2014,101.1783
-55573,General Indices,May 1 2015,100.7132
-55574,General Indices,May 1 2016,101.2299
-55575,General Indices,May 1 2017,104.6743
-55576,General Indices,May 1 2018,107.7081
-55577,General Indices,May 1 2019,110.5792
-55578,General Indices,May 1 2020,110.911
-55579,General Indices,May 1 2021,114.8849
-55580,General Indices,Jun 1 2000,69.4642
-55581,General Indices,Jun 1 2001,70.5567
-55582,General Indices,Jun 1 2002,70.242
-55583,General Indices,Jun 1 2003,69.9831
-55584,General Indices,Jun 1 2004,70.7213
-55585,General Indices,Jun 1 2005,72.1132
-55586,General Indices,Jun 1 2006,74.7694
-55587,General Indices,Jun 1 2007,78.3954
-55588,General Indices,Jun 1 2008,88.1725
-55589,General Indices,Jun 1 2009,91.9001
-55590,General Indices,Jun 1 2010,92.8611
-55591,General Indices,Jun 1 2011,97.3479
-55592,General Indices,Jun 1 2012,99.8227
-55593,General Indices,Jun 1 2013,101.0218
-55594,General Indices,Jun 1 2014,101.1822
-55595,General Indices,Jun 1 2015,100.6425
-55596,General Indices,Jun 1 2016,101.3439
-55597,General Indices,Jun 1 2017,104.9425
-55598,General Indices,Jun 1 2018,107.7014
-55599,General Indices,Jun 1 2019,110.3661
-55600,General Indices,Jun 1 2020,111.477
-55601,General Indices,Jun 1 2021,115.5194
-55602,General Indices,Jul 1 2000,69.1862
-55603,General Indices,Jul 1 2001,69.9924
-55604,General Indices,Jul 1 2002,70.0484
-55605,General Indices,Jul 1 2003,69.4262
-55606,General Indices,Jul 1 2004,70.7185
-55607,General Indices,Jul 1 2005,71.9746
-55608,General Indices,Jul 1 2006,75.1195
-55609,General Indices,Jul 1 2007,78.9204
-55610,General Indices,Jul 1 2008,88.537
-55611,General Indices,Jul 1 2009,91.1894
-55612,General Indices,Jul 1 2010,92.895
-55613,General Indices,Jul 1 2011,97.1247
-55614,General Indices,Jul 1 2012,99.8438
-55615,General Indices,Jul 1 2013,100.3523
-55616,General Indices,Jul 1 2014,100.667
-55617,General Indices,Jul 1 2015,100.1725
-55618,General Indices,Jul 1 2016,100.6338
-55619,General Indices,Jul 1 2017,104.5896
-55620,General Indices,Jul 1 2018,107.1698
-55621,General Indices,Jul 1 2019,110.0142
-55622,General Indices,Jul 1 2020,111.1681
-55623,General Indices,Aug 1 2000,68.7618
-55624,General Indices,Aug 1 2001,70.426
-55625,General Indices,Aug 1 2002,69.6518
-55626,General Indices,Aug 1 2003,68.9245
-55627,General Indices,Aug 1 2004,70.4392
-55628,General Indices,Aug 1 2005,72.0403
-55629,General Indices,Aug 1 2006,75.0622
-55630,General Indices,Aug 1 2007,79.195
-55631,General Indices,Aug 1 2008,88.6807
-55632,General Indices,Aug 1 2009,91.0042
-55633,General Indices,Aug 1 2010,92.6593
-55634,General Indices,Aug 1 2011,96.7718
-55635,General Indices,Aug 1 2012,100.0083
-55636,General Indices,Aug 1 2013,100.4119
-55637,General Indices,Aug 1 2014,100.5837
-55638,General Indices,Aug 1 2015,99.3416
-55639,General Indices,Aug 1 2016,100.1629
-55640,General Indices,Aug 1 2017,104.5411
-55641,General Indices,Aug 1 2018,106.7647
-55642,General Indices,Aug 1 2019,109.5784
-55643,General Indices,Aug 1 2020,110.9607
-55644,General Indices,Sep 1 2000,68.7876
-55645,General Indices,Sep 1 2001,70.2956
-55646,General Indices,Sep 1 2002,69.2545
-55647,General Indices,Sep 1 2003,68.6715
-55648,General Indices,Sep 1 2004,70.8566
-55649,General Indices,Sep 1 2005,72.6596
-55650,General Indices,Sep 1 2006,74.9646
-55651,General Indices,Sep 1 2007,80.2692
-55652,General Indices,Sep 1 2008,89.1263
-55653,General Indices,Sep 1 2009,91.5599
-55654,General Indices,Sep 1 2010,93.2093
-55655,General Indices,Sep 1 2011,97.444
-55656,General Indices,Sep 1 2012,100.7343
-55657,General Indices,Sep 1 2013,101.1075
-55658,General Indices,Sep 1 2014,101.0117
-55659,General Indices,Sep 1 2015,99.9515
-55660,General Indices,Sep 1 2016,100.7892
-55661,General Indices,Sep 1 2017,105.6101
-55662,General Indices,Sep 1 2018,108.1927
-55663,General Indices,Sep 1 2019,110.5867
-55664,General Indices,Sep 1 2020,111.4091
-55665,General Indices,Oct 1 2000,68.901
-55666,General Indices,Oct 1 2001,70.5044
-55667,General Indices,Oct 1 2002,69.7004
-55668,General Indices,Oct 1 2003,68.7738
-55669,General Indices,Oct 1 2004,70.9616
-55670,General Indices,Oct 1 2005,73.1295
-55671,General Indices,Oct 1 2006,75.743
-55672,General Indices,Oct 1 2007,81.4711
-55673,General Indices,Oct 1 2008,90.0193
-55674,General Indices,Oct 1 2009,91.1564
-55675,General Indices,Oct 1 2010,93.6402
-55676,General Indices,Oct 1 2011,97.5379
-55677,General Indices,Oct 1 2012,100.5769
-55678,General Indices,Oct 1 2013,100.9862
-55679,General Indices,Oct 1 2014,101.0917
-55680,General Indices,Oct 1 2015,100.4212
-55681,General Indices,Oct 1 2016,101.322
-55682,General Indices,Oct 1 2017,105.7737
-55683,General Indices,Oct 1 2018,108.8846
-55684,General Indices,Oct 1 2019,110.6717
-55685,General Indices,Oct 1 2020,111.4826
-55686,General Indices,Nov 1 2000,69.1577
-55687,General Indices,Nov 1 2001,70.4774
-55688,General Indices,Nov 1 2002,69.7805
-55689,General Indices,Nov 1 2003,69.0999
-55690,General Indices,Nov 1 2004,71.1462
-55691,General Indices,Nov 1 2005,73.1463
-55692,General Indices,Nov 1 2006,76.3522
-55693,General Indices,Nov 1 2007,82.3272
-55694,General Indices,Nov 1 2008,89.7986
-55695,General Indices,Nov 1 2009,91.176
-55696,General Indices,Nov 1 2010,93.6248
-55697,General Indices,Nov 1 2011,97.7295
-55698,General Indices,Nov 1 2012,100.4224
-55699,General Indices,Nov 1 2013,100.8297
-55700,General Indices,Nov 1 2014,101.0574
-55701,General Indices,Nov 1 2015,100.6948
-55702,General Indices,Nov 1 2016,101.6577
-55703,General Indices,Nov 1 2017,106.0859
-55704,General Indices,Nov 1 2018,108.7566
-55705,General Indices,Nov 1 2019,110.6553
-55706,General Indices,Nov 1 2020,111.3244
-55707,General Indices,Dec 1 2000,69.3108
-55708,General Indices,Dec 1 2001,70.7189
-55709,General Indices,Dec 1 2002,70.028
-55710,General Indices,Dec 1 2003,69.0985
-55711,General Indices,Dec 1 2004,71.101
-55712,General Indices,Dec 1 2005,73.2003
-55713,General Indices,Dec 1 2006,76.4934
-55714,General Indices,Dec 1 2007,82.7242
-55715,General Indices,Dec 1 2008,89.7322
-55716,General Indices,Dec 1 2009,90.8823
-55717,General Indices,Dec 1 2010,94.3614
-55718,General Indices,Dec 1 2011,97.573
-55719,General Indices,Dec 1 2012,100.3367
-55720,General Indices,Dec 1 2013,100.7025
-55721,General Indices,Dec 1 2014,100.4368
-55722,General Indices,Dec 1 2015,100.3518
-55723,General Indices,Dec 1 2016,102.0671
-55724,General Indices,Dec 1 2017,106.0629
-55725,General Indices,Dec 1 2018,108.0746
-55726,General Indices,Dec 1 2019,111.0177
-55727,General Indices,Dec 1 2020,111.2892
+55212,Food Indices (2015=100),Jan 1 2000,61.8202
+55213,Food Indices (2015=100),Jan 1 2001,60.9874
+55214,Food Indices (2015=100),Jan 1 2002,65.5864
+55215,Food Indices (2015=100),Jan 1 2003,60.8648
+55216,Food Indices (2015=100),Jan 1 2004,59.8789
+55217,Food Indices (2015=100),Jan 1 2005,62.8694
+55218,Food Indices (2015=100),Jan 1 2006,65.651
+55219,Food Indices (2015=100),Jan 1 2007,71.1899
+55220,Food Indices (2015=100),Jan 1 2008,82.5374
+55221,Food Indices (2015=100),Jan 1 2009,91.403
+55222,Food Indices (2015=100),Jan 1 2010,86.7491
+55223,Food Indices (2015=100),Jan 1 2011,92.1589
+55224,Food Indices (2015=100),Jan 1 2012,97.2125
+55225,Food Indices (2015=100),Jan 1 2013,99.8866
+55226,Food Indices (2015=100),Jan 1 2014,100.796
+55227,Food Indices (2015=100),Jan 1 2015,100.3656
+55228,Food Indices (2015=100),Jan 1 2016,100.3368
+55229,Food Indices (2015=100),Jan 1 2017,103.9396
+55230,Food Indices (2015=100),Jan 1 2018,107.5198
+55231,Food Indices (2015=100),Jan 1 2019,107.2107
+55232,Food Indices (2015=100),Jan 1 2020,111.7975
+55233,Food Indices (2015=100),Jan 1 2021,111.5814
+55234,Food Indices (2015=100),Feb 1 2000,61.3823
+55235,Food Indices (2015=100),Feb 1 2001,61.6928
+55236,Food Indices (2015=100),Feb 1 2002,65.1552
+55237,Food Indices (2015=100),Feb 1 2003,60.4159
+55238,Food Indices (2015=100),Feb 1 2004,59.7578
+55239,Food Indices (2015=100),Feb 1 2005,63.251
+55240,Food Indices (2015=100),Feb 1 2006,65.964
+55241,Food Indices (2015=100),Feb 1 2007,71.6844
+55242,Food Indices (2015=100),Feb 1 2008,83.9878
+55243,Food Indices (2015=100),Feb 1 2009,91.4658
+55244,Food Indices (2015=100),Feb 1 2010,86.6695
+55245,Food Indices (2015=100),Feb 1 2011,93.4621
+55246,Food Indices (2015=100),Feb 1 2012,97.5766
+55247,Food Indices (2015=100),Feb 1 2013,100.0352
+55248,Food Indices (2015=100),Feb 1 2014,101.1664
+55249,Food Indices (2015=100),Feb 1 2015,100.0745
+55250,Food Indices (2015=100),Feb 1 2016,100.6019
+55251,Food Indices (2015=100),Feb 1 2017,104.9814
+55252,Food Indices (2015=100),Feb 1 2018,106.9353
+55253,Food Indices (2015=100),Feb 1 2019,107.8143
+55254,Food Indices (2015=100),Feb 1 2020,112.1628
+55255,Food Indices (2015=100),Feb 1 2021,111.5944
+55256,Food Indices (2015=100),Mar 1 2000,60.8391
+55257,Food Indices (2015=100),Mar 1 2001,62.3692
+55258,Food Indices (2015=100),Mar 1 2002,64.1744
+55259,Food Indices (2015=100),Mar 1 2003,60.6307
+55260,Food Indices (2015=100),Mar 1 2004,60.0996
+55261,Food Indices (2015=100),Mar 1 2005,63.7391
+55262,Food Indices (2015=100),Mar 1 2006,66.112
+55263,Food Indices (2015=100),Mar 1 2007,72.1016
+55264,Food Indices (2015=100),Mar 1 2008,85.1506
+55265,Food Indices (2015=100),Mar 1 2009,91.2582
+55266,Food Indices (2015=100),Mar 1 2010,86.892
+55267,Food Indices (2015=100),Mar 1 2011,94.6319
+55268,Food Indices (2015=100),Mar 1 2012,98.6954
+55269,Food Indices (2015=100),Mar 1 2013,100.4027
+55270,Food Indices (2015=100),Mar 1 2014,101.3607
+55271,Food Indices (2015=100),Mar 1 2015,99.6294
+55272,Food Indices (2015=100),Mar 1 2016,101.1404
+55273,Food Indices (2015=100),Mar 1 2017,104.0563
+55274,Food Indices (2015=100),Mar 1 2018,106.4212
+55275,Food Indices (2015=100),Mar 1 2019,108.3656
+55276,Food Indices (2015=100),Mar 1 2020,112.2214
+55277,Food Indices (2015=100),Mar 1 2021,112.0806
+55278,Food Indices (2015=100),Apr 1 2000,60.5401
+55279,Food Indices (2015=100),Apr 1 2001,62.8016
+55280,Food Indices (2015=100),Apr 1 2002,63.5248
+55281,Food Indices (2015=100),Apr 1 2003,60.7819
+55282,Food Indices (2015=100),Apr 1 2004,60.3392
+55283,Food Indices (2015=100),Apr 1 2005,63.8438
+55284,Food Indices (2015=100),Apr 1 2006,66.7597
+55285,Food Indices (2015=100),Apr 1 2007,73.5371
+55286,Food Indices (2015=100),Apr 1 2008,86.419
+55287,Food Indices (2015=100),Apr 1 2009,90.8008
+55288,Food Indices (2015=100),Apr 1 2010,87.5947
+55289,Food Indices (2015=100),Apr 1 2011,96.6792
+55290,Food Indices (2015=100),Apr 1 2012,99.3323
+55291,Food Indices (2015=100),Apr 1 2013,100.5182
+55292,Food Indices (2015=100),Apr 1 2014,101.7218
+55293,Food Indices (2015=100),Apr 1 2015,101.065
+55294,Food Indices (2015=100),Apr 1 2016,102.6584
+55295,Food Indices (2015=100),Apr 1 2017,104.6959
+55296,Food Indices (2015=100),Apr 1 2018,107.553
+55297,Food Indices (2015=100),Apr 1 2019,109.915
+55298,Food Indices (2015=100),Apr 1 2020,113.662
+55299,Food Indices (2015=100),Apr 1 2021,113.5354
+55300,Food Indices (2015=100),May 1 2000,60.1689
+55301,Food Indices (2015=100),May 1 2001,63.062
+55302,Food Indices (2015=100),May 1 2002,62.6845
+55303,Food Indices (2015=100),May 1 2003,60.5035
+55304,Food Indices (2015=100),May 1 2004,61.5875
+55305,Food Indices (2015=100),May 1 2005,64.3763
+55306,Food Indices (2015=100),May 1 2006,67.4651
+55307,Food Indices (2015=100),May 1 2007,73.7515
+55308,Food Indices (2015=100),May 1 2008,87.1323
+55309,Food Indices (2015=100),May 1 2009,90.2345
+55310,Food Indices (2015=100),May 1 2010,88.1232
+55311,Food Indices (2015=100),May 1 2011,97.9441
+55312,Food Indices (2015=100),May 1 2012,98.8391
+55313,Food Indices (2015=100),May 1 2013,101.2982
+55314,Food Indices (2015=100),May 1 2014,101.68
+55315,Food Indices (2015=100),May 1 2015,101.2711
+55316,Food Indices (2015=100),May 1 2016,102.2898
+55317,Food Indices (2015=100),May 1 2017,104.3767
+55318,Food Indices (2015=100),May 1 2018,107.1402
+55319,Food Indices (2015=100),May 1 2019,110.2385
+55320,Food Indices (2015=100),May 1 2020,113.3651
+55321,Food Indices (2015=100),May 1 2021,114.2025
+55322,Food Indices (2015=100),Jun 1 2000,61.0178
+55323,Food Indices (2015=100),Jun 1 2001,63.7413
+55324,Food Indices (2015=100),Jun 1 2002,62.2663
+55325,Food Indices (2015=100),Jun 1 2003,60.9433
+55326,Food Indices (2015=100),Jun 1 2004,61.6575
+55327,Food Indices (2015=100),Jun 1 2005,63.9737
+55328,Food Indices (2015=100),Jun 1 2006,67.7087
+55329,Food Indices (2015=100),Jun 1 2007,73.8789
+55330,Food Indices (2015=100),Jun 1 2008,87.8123
+55331,Food Indices (2015=100),Jun 1 2009,88.7299
+55332,Food Indices (2015=100),Jun 1 2010,88.0988
+55333,Food Indices (2015=100),Jun 1 2011,97.1257
+55334,Food Indices (2015=100),Jun 1 2012,98.7282
+55335,Food Indices (2015=100),Jun 1 2013,101.0463
+55336,Food Indices (2015=100),Jun 1 2014,101.4419
+55337,Food Indices (2015=100),Jun 1 2015,100.4776
+55338,Food Indices (2015=100),Jun 1 2016,101.4273
+55339,Food Indices (2015=100),Jun 1 2017,104.0354
+55340,Food Indices (2015=100),Jun 1 2018,106.2497
+55341,Food Indices (2015=100),Jun 1 2019,109.6637
+55342,Food Indices (2015=100),Jun 1 2020,112.9234
+55343,Food Indices (2015=100),Jun 1 2021,113.831
+55344,Food Indices (2015=100),Jul 1 2000,60.759
+55345,Food Indices (2015=100),Jul 1 2001,62.9437
+55346,Food Indices (2015=100),Jul 1 2002,61.7108
+55347,Food Indices (2015=100),Jul 1 2003,59.8979
+55348,Food Indices (2015=100),Jul 1 2004,62.5675
+55349,Food Indices (2015=100),Jul 1 2005,63.3338
+55350,Food Indices (2015=100),Jul 1 2006,67.9202
+55351,Food Indices (2015=100),Jul 1 2007,74.6696
+55352,Food Indices (2015=100),Jul 1 2008,88.2
+55353,Food Indices (2015=100),Jul 1 2009,87.8629
+55354,Food Indices (2015=100),Jul 1 2010,88.0185
+55355,Food Indices (2015=100),Jul 1 2011,96.2641
+55356,Food Indices (2015=100),Jul 1 2012,98.5511
+55357,Food Indices (2015=100),Jul 1 2013,100.2213
+55358,Food Indices (2015=100),Jul 1 2014,101.1499
+55359,Food Indices (2015=100),Jul 1 2015,99.7902
+55360,Food Indices (2015=100),Jul 1 2016,101.0717
+55361,Food Indices (2015=100),Jul 1 2017,103.9928
+55362,Food Indices (2015=100),Jul 1 2018,105.4822
+55363,Food Indices (2015=100),Jul 1 2019,110.3443
+55364,Food Indices (2015=100),Jul 1 2020,111.5719
+55365,Food Indices (2015=100),Aug 1 2000,60.136
+55366,Food Indices (2015=100),Aug 1 2001,62.7511
+55367,Food Indices (2015=100),Aug 1 2002,60.9965
+55368,Food Indices (2015=100),Aug 1 2003,58.9108
+55369,Food Indices (2015=100),Aug 1 2004,62.0003
+55370,Food Indices (2015=100),Aug 1 2005,63.188
+55371,Food Indices (2015=100),Aug 1 2006,67.806
+55372,Food Indices (2015=100),Aug 1 2007,74.8949
+55373,Food Indices (2015=100),Aug 1 2008,88.191
+55374,Food Indices (2015=100),Aug 1 2009,86.811
+55375,Food Indices (2015=100),Aug 1 2010,87.6872
+55376,Food Indices (2015=100),Aug 1 2011,95.1518
+55377,Food Indices (2015=100),Aug 1 2012,97.9299
+55378,Food Indices (2015=100),Aug 1 2013,99.1448
+55379,Food Indices (2015=100),Aug 1 2014,99.9995
+55380,Food Indices (2015=100),Aug 1 2015,98.7052
+55381,Food Indices (2015=100),Aug 1 2016,100.4302
+55382,Food Indices (2015=100),Aug 1 2017,104.0627
+55383,Food Indices (2015=100),Aug 1 2018,104.472
+55384,Food Indices (2015=100),Aug 1 2019,109.7721
+55385,Food Indices (2015=100),Aug 1 2020,111.3532
+55386,Food Indices (2015=100),Sep 1 2000,59.8797
+55387,Food Indices (2015=100),Sep 1 2001,62.4857
+55388,Food Indices (2015=100),Sep 1 2002,60.0265
+55389,Food Indices (2015=100),Sep 1 2003,58.711
+55390,Food Indices (2015=100),Sep 1 2004,61.8664
+55391,Food Indices (2015=100),Sep 1 2005,63.3643
+55392,Food Indices (2015=100),Sep 1 2006,67.9339
+55393,Food Indices (2015=100),Sep 1 2007,76.5517
+55394,Food Indices (2015=100),Sep 1 2008,88.5741
+55395,Food Indices (2015=100),Sep 1 2009,86.835
+55396,Food Indices (2015=100),Sep 1 2010,88.6432
+55397,Food Indices (2015=100),Sep 1 2011,95.5972
+55398,Food Indices (2015=100),Sep 1 2012,98.3607
+55399,Food Indices (2015=100),Sep 1 2013,99.8543
+55400,Food Indices (2015=100),Sep 1 2014,100.7581
+55401,Food Indices (2015=100),Sep 1 2015,99.5357
+55402,Food Indices (2015=100),Sep 1 2016,100.7531
+55403,Food Indices (2015=100),Sep 1 2017,105.4574
+55404,Food Indices (2015=100),Sep 1 2018,106.4717
+55405,Food Indices (2015=100),Sep 1 2019,110.364
+55406,Food Indices (2015=100),Sep 1 2020,112.1482
+55407,Food Indices (2015=100),Oct 1 2000,59.9574
+55408,Food Indices (2015=100),Oct 1 2001,62.7812
+55409,Food Indices (2015=100),Oct 1 2002,60.3519
+55410,Food Indices (2015=100),Oct 1 2003,59.0854
+55411,Food Indices (2015=100),Oct 1 2004,61.7292
+55412,Food Indices (2015=100),Oct 1 2005,63.8045
+55413,Food Indices (2015=100),Oct 1 2006,68.588
+55414,Food Indices (2015=100),Oct 1 2007,79.4043
+55415,Food Indices (2015=100),Oct 1 2008,89.328
+55416,Food Indices (2015=100),Oct 1 2009,86.3832
+55417,Food Indices (2015=100),Oct 1 2010,89.4912
+55418,Food Indices (2015=100),Oct 1 2011,95.4716
+55419,Food Indices (2015=100),Oct 1 2012,98.2897
+55420,Food Indices (2015=100),Oct 1 2013,99.5581
+55421,Food Indices (2015=100),Oct 1 2014,100.2006
+55422,Food Indices (2015=100),Oct 1 2015,100.0498
+55423,Food Indices (2015=100),Oct 1 2016,100.4508
+55424,Food Indices (2015=100),Oct 1 2017,106.041
+55425,Food Indices (2015=100),Oct 1 2018,106.2529
+55426,Food Indices (2015=100),Oct 1 2019,110.0681
+55427,Food Indices (2015=100),Oct 1 2020,111.3147
+55428,Food Indices (2015=100),Nov 1 2000,60.1514
+55429,Food Indices (2015=100),Nov 1 2001,63.0603
+55430,Food Indices (2015=100),Nov 1 2002,60.2773
+55431,Food Indices (2015=100),Nov 1 2003,59.5528
+55432,Food Indices (2015=100),Nov 1 2004,61.9526
+55433,Food Indices (2015=100),Nov 1 2005,64.3737
+55434,Food Indices (2015=100),Nov 1 2006,69.5342
+55435,Food Indices (2015=100),Nov 1 2007,80.2687
+55436,Food Indices (2015=100),Nov 1 2008,89.6106
+55437,Food Indices (2015=100),Nov 1 2009,86.2859
+55438,Food Indices (2015=100),Nov 1 2010,90.0312
+55439,Food Indices (2015=100),Nov 1 2011,95.912
+55440,Food Indices (2015=100),Nov 1 2012,98.7099
+55441,Food Indices (2015=100),Nov 1 2013,99.4923
+55442,Food Indices (2015=100),Nov 1 2014,100.2142
+55443,Food Indices (2015=100),Nov 1 2015,99.8932
+55444,Food Indices (2015=100),Nov 1 2016,100.8699
+55445,Food Indices (2015=100),Nov 1 2017,105.7415
+55446,Food Indices (2015=100),Nov 1 2018,105.65
+55447,Food Indices (2015=100),Nov 1 2019,110.0264
+55448,Food Indices (2015=100),Nov 1 2020,110.6916
+55449,Food Indices (2015=100),Dec 1 2000,60.6874
+55450,Food Indices (2015=100),Dec 1 2001,64.4319
+55451,Food Indices (2015=100),Dec 1 2002,61.0255
+55452,Food Indices (2015=100),Dec 1 2003,59.8384
+55453,Food Indices (2015=100),Dec 1 2004,62.7004
+55454,Food Indices (2015=100),Dec 1 2005,64.873
+55455,Food Indices (2015=100),Dec 1 2006,70.1551
+55456,Food Indices (2015=100),Dec 1 2007,81.0341
+55457,Food Indices (2015=100),Dec 1 2008,89.8531
+55458,Food Indices (2015=100),Dec 1 2009,85.9069
+55459,Food Indices (2015=100),Dec 1 2010,91.1509
+55460,Food Indices (2015=100),Dec 1 2011,96.1719
+55461,Food Indices (2015=100),Dec 1 2012,99.2905
+55462,Food Indices (2015=100),Dec 1 2013,99.7419
+55463,Food Indices (2015=100),Dec 1 2014,99.9379
+55464,Food Indices (2015=100),Dec 1 2015,99.1427
+55465,Food Indices (2015=100),Dec 1 2016,102.7698
+55466,Food Indices (2015=100),Dec 1 2017,106.6792
+55467,Food Indices (2015=100),Dec 1 2018,106.0702
+55468,Food Indices (2015=100),Dec 1 2019,109.8271
+55469,Food Indices (2015=100),Dec 1 2020,110.1011
+55470,General Indices (2015=100),Jan 1 2000,69.3462
+55471,General Indices (2015=100),Jan 1 2001,69.1432
+55472,General Indices (2015=100),Jan 1 2002,71.392
+55473,General Indices (2015=100),Jan 1 2003,69.9995
+55474,General Indices (2015=100),Jan 1 2004,69.085
+55475,General Indices (2015=100),Jan 1 2005,71.0819
+55476,General Indices (2015=100),Jan 1 2006,73.543
+55477,General Indices (2015=100),Jan 1 2007,76.5077
+55478,General Indices (2015=100),Jan 1 2008,84.0625
+55479,General Indices (2015=100),Jan 1 2009,92.1617
+55480,General Indices (2015=100),Jan 1 2010,92.031
+55481,General Indices (2015=100),Jan 1 2011,94.7232
+55482,General Indices (2015=100),Jan 1 2012,97.9019
+55483,General Indices (2015=100),Jan 1 2013,100.4927
+55484,General Indices (2015=100),Jan 1 2014,100.6537
+55485,General Indices (2015=100),Jan 1 2015,99.13
+55486,General Indices (2015=100),Jan 1 2016,100.0147
+55487,General Indices (2015=100),Jan 1 2017,102.3231
+55488,General Indices (2015=100),Jan 1 2018,106.4272
+55489,General Indices (2015=100),Jan 1 2019,108.2849
+55490,General Indices (2015=100),Jan 1 2020,111.501
+55491,General Indices (2015=100),Jan 1 2021,111.8332
+55492,General Indices (2015=100),Feb 1 2000,69.3486
+55493,General Indices (2015=100),Feb 1 2001,69.2547
+55494,General Indices (2015=100),Feb 1 2002,71.2302
+55495,General Indices (2015=100),Feb 1 2003,69.82
+55496,General Indices (2015=100),Feb 1 2004,68.9236
+55497,General Indices (2015=100),Feb 1 2005,71.2059
+55498,General Indices (2015=100),Feb 1 2006,73.5772
+55499,General Indices (2015=100),Feb 1 2007,76.7463
+55500,General Indices (2015=100),Feb 1 2008,85.0022
+55501,General Indices (2015=100),Feb 1 2009,92.416
+55502,General Indices (2015=100),Feb 1 2010,91.9807
+55503,General Indices (2015=100),Feb 1 2011,94.7972
+55504,General Indices (2015=100),Feb 1 2012,98.2934
+55505,General Indices (2015=100),Feb 1 2013,100.4466
+55506,General Indices (2015=100),Feb 1 2014,100.6094
+55507,General Indices (2015=100),Feb 1 2015,98.8037
+55508,General Indices (2015=100),Feb 1 2016,99.6948
+55509,General Indices (2015=100),Feb 1 2017,102.6767
+55510,General Indices (2015=100),Feb 1 2018,106.244
+55511,General Indices (2015=100),Feb 1 2019,108.4233
+55512,General Indices (2015=100),Feb 1 2020,111.4443
+55513,General Indices (2015=100),Feb 1 2021,112.075
+55514,General Indices (2015=100),Mar 1 2000,69.2006
+55515,General Indices (2015=100),Mar 1 2001,69.6317
+55516,General Indices (2015=100),Mar 1 2002,70.7634
+55517,General Indices (2015=100),Mar 1 2003,69.9957
+55518,General Indices (2015=100),Mar 1 2004,69.2734
+55519,General Indices (2015=100),Mar 1 2005,71.5267
+55520,General Indices (2015=100),Mar 1 2006,73.7588
+55521,General Indices (2015=100),Mar 1 2007,77.1743
+55522,General Indices (2015=100),Mar 1 2008,85.8649
+55523,General Indices (2015=100),Mar 1 2009,92.4393
+55524,General Indices (2015=100),Mar 1 2010,92.253
+55525,General Indices (2015=100),Mar 1 2011,95.7548
+55526,General Indices (2015=100),Mar 1 2012,99.2389
+55527,General Indices (2015=100),Mar 1 2013,100.7634
+55528,General Indices (2015=100),Mar 1 2014,100.9629
+55529,General Indices (2015=100),Mar 1 2015,99.5614
+55530,General Indices (2015=100),Mar 1 2016,100.7112
+55531,General Indices (2015=100),Mar 1 2017,103.8371
+55532,General Indices (2015=100),Mar 1 2018,106.6236
+55533,General Indices (2015=100),Mar 1 2019,109.4406
+55534,General Indices (2015=100),Mar 1 2020,111.3606
+55535,General Indices (2015=100),Mar 1 2021,113.1832
+55536,General Indices (2015=100),Apr 1 2000,69.1837
+55537,General Indices (2015=100),Apr 1 2001,69.768
+55538,General Indices (2015=100),Apr 1 2002,70.7315
+55539,General Indices (2015=100),Apr 1 2003,70.0268
+55540,General Indices (2015=100),Apr 1 2004,69.5732
+55541,General Indices (2015=100),Apr 1 2005,71.7803
+55542,General Indices (2015=100),Apr 1 2006,74.2703
+55543,General Indices (2015=100),Apr 1 2007,77.8394
+55544,General Indices (2015=100),Apr 1 2008,86.9284
+55545,General Indices (2015=100),Apr 1 2009,92.3634
+55546,General Indices (2015=100),Apr 1 2010,92.65
+55547,General Indices (2015=100),Apr 1 2011,96.7562
+55548,General Indices (2015=100),Apr 1 2012,99.8348
+55549,General Indices (2015=100),Apr 1 2013,101.0692
+55550,General Indices (2015=100),Apr 1 2014,101.2689
+55551,General Indices (2015=100),Apr 1 2015,100.2157
+55552,General Indices (2015=100),Apr 1 2016,101.239
+55553,General Indices (2015=100),Apr 1 2017,104.8284
+55554,General Indices (2015=100),Apr 1 2018,107.2826
+55555,General Indices (2015=100),Apr 1 2019,110.323
+55556,General Indices (2015=100),Apr 1 2020,111.451
+55557,General Indices (2015=100),Apr 1 2021,114.236
+55558,General Indices (2015=100),May 1 2000,68.9494
+55559,General Indices (2015=100),May 1 2001,70.1704
+55560,General Indices (2015=100),May 1 2002,70.484
+55561,General Indices (2015=100),May 1 2003,69.9215
+55562,General Indices (2015=100),May 1 2004,70.647
+55563,General Indices (2015=100),May 1 2005,72.0109
+55564,General Indices (2015=100),May 1 2006,74.5918
+55565,General Indices (2015=100),May 1 2007,78.2091
+55566,General Indices (2015=100),May 1 2008,87.6265
+55567,General Indices (2015=100),May 1 2009,92.2175
+55568,General Indices (2015=100),May 1 2010,92.8179
+55569,General Indices (2015=100),May 1 2011,97.4754
+55570,General Indices (2015=100),May 1 2012,99.8973
+55571,General Indices (2015=100),May 1 2013,101.265
+55572,General Indices (2015=100),May 1 2014,101.1783
+55573,General Indices (2015=100),May 1 2015,100.7132
+55574,General Indices (2015=100),May 1 2016,101.2299
+55575,General Indices (2015=100),May 1 2017,104.6743
+55576,General Indices (2015=100),May 1 2018,107.7081
+55577,General Indices (2015=100),May 1 2019,110.5792
+55578,General Indices (2015=100),May 1 2020,110.911
+55579,General Indices (2015=100),May 1 2021,114.8849
+55580,General Indices (2015=100),Jun 1 2000,69.4642
+55581,General Indices (2015=100),Jun 1 2001,70.5567
+55582,General Indices (2015=100),Jun 1 2002,70.242
+55583,General Indices (2015=100),Jun 1 2003,69.9831
+55584,General Indices (2015=100),Jun 1 2004,70.7213
+55585,General Indices (2015=100),Jun 1 2005,72.1132
+55586,General Indices (2015=100),Jun 1 2006,74.7694
+55587,General Indices (2015=100),Jun 1 2007,78.3954
+55588,General Indices (2015=100),Jun 1 2008,88.1725
+55589,General Indices (2015=100),Jun 1 2009,91.9001
+55590,General Indices (2015=100),Jun 1 2010,92.8611
+55591,General Indices (2015=100),Jun 1 2011,97.3479
+55592,General Indices (2015=100),Jun 1 2012,99.8227
+55593,General Indices (2015=100),Jun 1 2013,101.0218
+55594,General Indices (2015=100),Jun 1 2014,101.1822
+55595,General Indices (2015=100),Jun 1 2015,100.6425
+55596,General Indices (2015=100),Jun 1 2016,101.3439
+55597,General Indices (2015=100),Jun 1 2017,104.9425
+55598,General Indices (2015=100),Jun 1 2018,107.7014
+55599,General Indices (2015=100),Jun 1 2019,110.3661
+55600,General Indices (2015=100),Jun 1 2020,111.477
+55601,General Indices (2015=100),Jun 1 2021,115.5194
+55602,General Indices (2015=100),Jul 1 2000,69.1862
+55603,General Indices (2015=100),Jul 1 2001,69.9924
+55604,General Indices (2015=100),Jul 1 2002,70.0484
+55605,General Indices (2015=100),Jul 1 2003,69.4262
+55606,General Indices (2015=100),Jul 1 2004,70.7185
+55607,General Indices (2015=100),Jul 1 2005,71.9746
+55608,General Indices (2015=100),Jul 1 2006,75.1195
+55609,General Indices (2015=100),Jul 1 2007,78.9204
+55610,General Indices (2015=100),Jul 1 2008,88.537
+55611,General Indices (2015=100),Jul 1 2009,91.1894
+55612,General Indices (2015=100),Jul 1 2010,92.895
+55613,General Indices (2015=100),Jul 1 2011,97.1247
+55614,General Indices (2015=100),Jul 1 2012,99.8438
+55615,General Indices (2015=100),Jul 1 2013,100.3523
+55616,General Indices (2015=100),Jul 1 2014,100.667
+55617,General Indices (2015=100),Jul 1 2015,100.1725
+55618,General Indices (2015=100),Jul 1 2016,100.6338
+55619,General Indices (2015=100),Jul 1 2017,104.5896
+55620,General Indices (2015=100),Jul 1 2018,107.1698
+55621,General Indices (2015=100),Jul 1 2019,110.0142
+55622,General Indices (2015=100),Jul 1 2020,111.1681
+55623,General Indices (2015=100),Aug 1 2000,68.7618
+55624,General Indices (2015=100),Aug 1 2001,70.426
+55625,General Indices (2015=100),Aug 1 2002,69.6518
+55626,General Indices (2015=100),Aug 1 2003,68.9245
+55627,General Indices (2015=100),Aug 1 2004,70.4392
+55628,General Indices (2015=100),Aug 1 2005,72.0403
+55629,General Indices (2015=100),Aug 1 2006,75.0622
+55630,General Indices (2015=100),Aug 1 2007,79.195
+55631,General Indices (2015=100),Aug 1 2008,88.6807
+55632,General Indices (2015=100),Aug 1 2009,91.0042
+55633,General Indices (2015=100),Aug 1 2010,92.6593
+55634,General Indices (2015=100),Aug 1 2011,96.7718
+55635,General Indices (2015=100),Aug 1 2012,100.0083
+55636,General Indices (2015=100),Aug 1 2013,100.4119
+55637,General Indices (2015=100),Aug 1 2014,100.5837
+55638,General Indices (2015=100),Aug 1 2015,99.3416
+55639,General Indices (2015=100),Aug 1 2016,100.1629
+55640,General Indices (2015=100),Aug 1 2017,104.5411
+55641,General Indices (2015=100),Aug 1 2018,106.7647
+55642,General Indices (2015=100),Aug 1 2019,109.5784
+55643,General Indices (2015=100),Aug 1 2020,110.9607
+55644,General Indices (2015=100),Sep 1 2000,68.7876
+55645,General Indices (2015=100),Sep 1 2001,70.2956
+55646,General Indices (2015=100),Sep 1 2002,69.2545
+55647,General Indices (2015=100),Sep 1 2003,68.6715
+55648,General Indices (2015=100),Sep 1 2004,70.8566
+55649,General Indices (2015=100),Sep 1 2005,72.6596
+55650,General Indices (2015=100),Sep 1 2006,74.9646
+55651,General Indices (2015=100),Sep 1 2007,80.2692
+55652,General Indices (2015=100),Sep 1 2008,89.1263
+55653,General Indices (2015=100),Sep 1 2009,91.5599
+55654,General Indices (2015=100),Sep 1 2010,93.2093
+55655,General Indices (2015=100),Sep 1 2011,97.444
+55656,General Indices (2015=100),Sep 1 2012,100.7343
+55657,General Indices (2015=100),Sep 1 2013,101.1075
+55658,General Indices (2015=100),Sep 1 2014,101.0117
+55659,General Indices (2015=100),Sep 1 2015,99.9515
+55660,General Indices (2015=100),Sep 1 2016,100.7892
+55661,General Indices (2015=100),Sep 1 2017,105.6101
+55662,General Indices (2015=100),Sep 1 2018,108.1927
+55663,General Indices (2015=100),Sep 1 2019,110.5867
+55664,General Indices (2015=100),Sep 1 2020,111.4091
+55665,General Indices (2015=100),Oct 1 2000,68.901
+55666,General Indices (2015=100),Oct 1 2001,70.5044
+55667,General Indices (2015=100),Oct 1 2002,69.7004
+55668,General Indices (2015=100),Oct 1 2003,68.7738
+55669,General Indices (2015=100),Oct 1 2004,70.9616
+55670,General Indices (2015=100),Oct 1 2005,73.1295
+55671,General Indices (2015=100),Oct 1 2006,75.743
+55672,General Indices (2015=100),Oct 1 2007,81.4711
+55673,General Indices (2015=100),Oct 1 2008,90.0193
+55674,General Indices (2015=100),Oct 1 2009,91.1564
+55675,General Indices (2015=100),Oct 1 2010,93.6402
+55676,General Indices (2015=100),Oct 1 2011,97.5379
+55677,General Indices (2015=100),Oct 1 2012,100.5769
+55678,General Indices (2015=100),Oct 1 2013,100.9862
+55679,General Indices (2015=100),Oct 1 2014,101.0917
+55680,General Indices (2015=100),Oct 1 2015,100.4212
+55681,General Indices (2015=100),Oct 1 2016,101.322
+55682,General Indices (2015=100),Oct 1 2017,105.7737
+55683,General Indices (2015=100),Oct 1 2018,108.8846
+55684,General Indices (2015=100),Oct 1 2019,110.6717
+55685,General Indices (2015=100),Oct 1 2020,111.4826
+55686,General Indices (2015=100),Nov 1 2000,69.1577
+55687,General Indices (2015=100),Nov 1 2001,70.4774
+55688,General Indices (2015=100),Nov 1 2002,69.7805
+55689,General Indices (2015=100),Nov 1 2003,69.0999
+55690,General Indices (2015=100),Nov 1 2004,71.1462
+55691,General Indices (2015=100),Nov 1 2005,73.1463
+55692,General Indices (2015=100),Nov 1 2006,76.3522
+55693,General Indices (2015=100),Nov 1 2007,82.3272
+55694,General Indices (2015=100),Nov 1 2008,89.7986
+55695,General Indices (2015=100),Nov 1 2009,91.176
+55696,General Indices (2015=100),Nov 1 2010,93.6248
+55697,General Indices (2015=100),Nov 1 2011,97.7295
+55698,General Indices (2015=100),Nov 1 2012,100.4224
+55699,General Indices (2015=100),Nov 1 2013,100.8297
+55700,General Indices (2015=100),Nov 1 2014,101.0574
+55701,General Indices (2015=100),Nov 1 2015,100.6948
+55702,General Indices (2015=100),Nov 1 2016,101.6577
+55703,General Indices (2015=100),Nov 1 2017,106.0859
+55704,General Indices (2015=100),Nov 1 2018,108.7566
+55705,General Indices (2015=100),Nov 1 2019,110.6553
+55706,General Indices (2015=100),Nov 1 2020,111.3244
+55707,General Indices (2015=100),Dec 1 2000,69.3108
+55708,General Indices (2015=100),Dec 1 2001,70.7189
+55709,General Indices (2015=100),Dec 1 2002,70.028
+55710,General Indices (2015=100),Dec 1 2003,69.0985
+55711,General Indices (2015=100),Dec 1 2004,71.101
+55712,General Indices (2015=100),Dec 1 2005,73.2003
+55713,General Indices (2015=100),Dec 1 2006,76.4934
+55714,General Indices (2015=100),Dec 1 2007,82.7242
+55715,General Indices (2015=100),Dec 1 2008,89.7322
+55716,General Indices (2015=100),Dec 1 2009,90.8823
+55717,General Indices (2015=100),Dec 1 2010,94.3614
+55718,General Indices (2015=100),Dec 1 2011,97.573
+55719,General Indices (2015=100),Dec 1 2012,100.3367
+55720,General Indices (2015=100),Dec 1 2013,100.7025
+55721,General Indices (2015=100),Dec 1 2014,100.4368
+55722,General Indices (2015=100),Dec 1 2015,100.3518
+55723,General Indices (2015=100),Dec 1 2016,102.0671
+55724,General Indices (2015=100),Dec 1 2017,106.0629
+55725,General Indices (2015=100),Dec 1 2018,108.0746
+55726,General Indices (2015=100),Dec 1 2019,111.0177
+55727,General Indices (2015=100),Dec 1 2020,111.2892
