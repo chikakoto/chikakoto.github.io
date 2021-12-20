@@ -19,7 +19,7 @@ if (type == 1) {
   label = ["Annual growth %"]
 } else if (type == 4) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/inflation/inflation_" + country + ".csv"
-  label = ["Food price inflaton"]
+  label = ["Food price inflation"]
 }
 
 
