@@ -17,6 +17,9 @@ if (type == 1) {
 } else if (type == 3) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/annual_growth/annual_growth_" + country + ".csv"
   label = ["Annual growth %"]
+} else if (type == 4) {
+  file = "https://chikakoto.github.io/viz/ct/line-chart/files/inflation/inflation_" + country + ".csv"
+  label = ["Food price inflaton"]
 }
 
 
