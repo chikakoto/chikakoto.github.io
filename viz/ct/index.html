@@ -3,8 +3,17 @@
     <meta charset="utf-8">
     <title>Food Production Trade and Price</title>
     <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        h2{
+            font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
 </head>
 <body>
+    <div>
+        <h2>PCA</h2>
+        <iframe src="pca.html" width="100%" height="530px" frameborder="0" id='linechart'></iframe>
+    </div>
     <div>
         <h2>Trade World Map</h2>
         <div>By clicking the country, the graphs below the map will change the content accordingly.
@@ -42,11 +51,6 @@
         <div>
             <iframe src="line-chart/index.html?type=0&country=Afghanistan" width="100%" height="380px" frameborder="0" id='linechart'></iframe>
         </div>
-    </div>
-    <div>
-        <h2>PCA</h2>
-        <iframe src="pca.html" width="100%" height="530px" frameborder="0"
-            id='linechart'></iframe>
     </div>
 </body>
 <script>
