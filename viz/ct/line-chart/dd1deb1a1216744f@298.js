@@ -6,20 +6,24 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const country = urlParams.get('country')
 const type = urlParams.get('type')
+let yaxis = 'price'
 let file = "https://chikakoto.github.io/viz/ct/line-chart/files/producer_price/producer_price_" + country + ".csv";
 let label = ["Cereals", "Citrus Fruit", "Coarse Grain", "Fruit", "Meat", "Milk", "Pulses", "Roots and Tubers", "Treenuts", "Vegetables"]
 if (type == 1) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/consumer_price/consumer_price_" + country + ".csv";
   label = ["Food Indices (2015=100)", "General Indices (2015=100)"]
+  yaxis = 'indices'
 } else if (type == 2) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/gdp/gdp_" + country + ".csv"
   label = ["Value US$ per capita"]
 } else if (type == 3) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/annual_growth/annual_growth_" + country + ".csv"
   label = ["Annual growth %"]
+  yaxis = 'rate'
 } else if (type == 4) {
   file = "https://chikakoto.github.io/viz/ct/line-chart/files/inflation/inflation_" + country + ".csv"
   label = ["Food price inflation"]
+  yaxis = 'rate'
 }
 
 
@@ -43,7 +47,7 @@ export default function define(runtime, observer) {
     vl.markPoint()
       .transform(vl.filter(hover))
   ).encode(
-    vl.y().fieldQ("price"),
+    vl.y().fieldQ(yaxis),
     vl.color().fieldN("symbol")    
   );
     
@@ -56,7 +60,7 @@ export default function define(runtime, observer) {
     // We pivot the data so we can show all the stock prices at once
     .transform(
       // vl.filter("datum.country == 'Afghanistan'" ),
-      vl.pivot("symbol").value("price").groupby(["date"])
+      vl.pivot("symbol").value(yaxis).groupby(["date"])
     )
     .encode(
       vl.opacity().value(0).if(hover, vl.value(0.7)),
@@ -68,7 +72,7 @@ export default function define(runtime, observer) {
     .layer(lineAndPoint, rule )
     .encode(vl.x().fieldT("date"))
     .data(file)
-    .width(width - 220)
+    .width(width - 250)
     .height(300)
     .render();
 }
