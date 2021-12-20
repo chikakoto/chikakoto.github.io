@@ -1,119 +1,280 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<svg width="960" height="500"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.browser text {
+  text-anchor: end;
+}
+.focus circle {
+        fill: black;
+        stroke: white;
+    }
+.overlay {
+        fill: none;
+        pointer-events: all;
+    }
+
+</style>
+<body>
+<div id="tooltip-container"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
 <script>
 
-var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 100, left: 50},
-    width = svg.attr("width") - margin.left - margin.right,
-    height = svg.attr("height") - margin.top - margin.bottom;
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
-var parseDate = d3.timeParse("%m/%d/%Y");
+var parseDate = d3.time.format("%m/%d/%Y").parse,
+    formatPercent = d3.format(".0%");
 
-var x = d3.scaleTime().range([0, width]);
-var y = d3.scaleLinear().range([height, 0]),
-    z = d3.scaleOrdinal(d3.schemeCategory10);
-// Define the axes
-var xAxis = d3.axisBottom().ticks(5)
-    .tickFormat(d3.timeFormat("%m/%Y"));
+var bisectDate = d3.bisector(function(d) {
+            return d.date;
+        }).left;
 
+var x = d3.time.scale()
+    .range([0, width]);
 
-var stack = d3.stack();
+var y = d3.scale.linear()
+    .range([height, 0]);
 
-var area = d3.area()
-    .x(function(d, i) { return x(d.data.date); })
-    .y0(function(d) { return y(d[0]); })
-    .y1(function(d) { return y(d[1]); });
+var color = d3.scale.category20();
 
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom").ticks(12)
+    .tickFormat(d3.time.format("%m/%Y"));;
 
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .tickFormat(formatPercent);
 
-var g = svg.append("g")
+var area = d3.svg.area()
+    .x(function(d) { return x(d.date); })
+    .y0(function(d) { return y(d.y0); })
+    .y1(function(d) { return y(d.y0 + d.y); });
+
+var stack = d3.layout.stack()
+    .values(function(d) { return d.values; });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("https://raw.githubusercontent.com/usersblock/CovidVsFood/main/AreaPlot/FoodAreaData.tsv", type, function(error, data) {
+d3.tsv("FoodAreaData.tsv", function(error, data) {
   if (error) throw error;
 
-  var keys = data.columns.slice(1);
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+
+  data.forEach(function(d) {
+    d.date = parseDate(d.date);
+  });
+
+  var browsers = stack(color.domain().map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+        return {date: d.date, y: d[name] / 100};
+      })
+    };
+  }));
+
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
-  z.domain(keys);
-  stack.keys(keys);
-
-  var layer = g.selectAll(".layer")
-    .data(stack(data))
-    .enter().append("g")
-      .attr("class", "layer");
-
-  layer.append("path")
-      .attr("class", "area")
-      .style("fill", function(d) { return z(d.key); })
-      .attr("d", area);
-
-  layer.filter(function(d) { return d[d.length - 1][1] - d[d.length - 1][0] > 0.01; })
-    .append("text")
-      .attr("x", width - 6)
-      .attr("y", function(d) { return y((d[d.length - 1][0] + d[d.length - 1][1]) / 2)+7; })
-      .attr("dy", ".35em")
-      .style("font", "10px sans-serif")
-      .style("text-anchor", "end")
-      .text(function(d) { return d.key; });
-
-  g.append("g")
-      .attr("class", "axis axis--x")
+ 
+   svg.append("g")
+      .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x).ticks(24)
-    .tickFormat(d3.timeFormat("%m / %Y")))
-    .selectAll("text")
-    .attr("y", 0)
-    .attr("x", 30)
-    .attr("dy", ".35em")
-    .attr("transform", "rotate(90)");
+      .call(xAxis);
 
-  g.append("g")
-      .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(10, "%"))
-      ;
-});
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis);
+      
+  var browser = svg.selectAll(".browser")
+      .data(browsers)
+      .enter().append("g")
+      .attr("class", "browser");
 
-    svg.append("text")
+
+  browser.append("path")
+      .attr("class", "area")
+      .attr("d", function(d) { return area(d.values); })
+      .style("fill", function(d) { return color(d.name); });
+      
+
+      
+  browser.append("text")
+      .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
+      .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.y0 + d.value.y / 2) +  ")"; })
+      .attr("x", -6)
+            .attr("y", 6)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name; });
+
+ // Tooltip
+            var focus = svg.append("g")
+                .attr("class", "focus")
+                .style("display", "none");
+
+            focus.append("circle")
+                .attr("r", 5);
+
+            focus.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em")
+                .style("font-size",15);
+                
+            var focus2 = svg.append("g")
+                .attr("class", "focus")
+                .style("display", "none");
+
+            focus2.append("circle")
+                .attr("r",5);
+
+            focus2.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em")
+                .style("font-size",15);
+                
+            var focus3 = svg.append("g")
+                .attr("class", "focus")
+                .style("display", "none");
+
+            focus3.append("circle")
+                .attr("r", 5);
+
+            focus3.append("text")
+                .attr("x", 9)
+                .attr("dy", ".35em")
+                .style("font-size",15);
+
+            var focus4 = svg.append("g")
+                .attr("class", "focus")
+                .style("display", "none");
+
+            focus4.append("circle")
+                .attr("r", 5);
+
+            focus4.append("text")
+                .attr("x", 9)
+                .attr("dy", ".5em")
+                .style("font-size",15);
+
+            var focus5 = svg.append("g")
+                .attr("class", "focus")
+                .style("display", "none");
+
+            focus5.append("circle")
+                .attr("r", 5);
+
+            focus5.append("text")
+                .attr("x", 9)
+                .attr("dy", ".5em")
+                .style("font-size",15);
+
+            var focus6 = svg.append("g")
+                .attr("class", "focus")
+                .style("display", "none");
+
+            focus6.append("circle")
+                .attr("r", 5);
+
+            focus6.append("text")
+                .attr("x", 9)
+                .attr("dy", ".5em")
+                .style("font-size",15);
+
+
+      svg.append("rect")
+                .attr("class", "overlay")
+                .attr("width", width)
+                .attr("height", height)
+                .on("mouseover", function() {
+                    focus.style("display", null);
+                    focus2.style("display", null);
+                    focus3.style("display", null);
+                    focus4.style("display", null);
+                    focus5.style("display", null);
+                    focus6.style("display", null);
+                })
+                .on("mouseout", function() {
+                    focus.style("display", "none");
+                    focus2.style("display", "none");
+                    focus3.style("display", "none");
+                    focus4.style("display", "none");
+                    focus5.style("display", "none");
+                    focus6.style("display", "none");
+                })
+                .on("mousemove", mousemove);
+
+            function mousemove() {
+            	
+                var x0 = x.invert(d3.mouse(this)[0]),
+                    i = bisectDate(data, x0, 1),
+                    d0 = data[i - 1],
+                    d1 = data[i],
+                    d= x0 - d0.date > d1.date - x0 ? d1 : d0;
+                  var depl=parseFloat(d['Meat']);
+                  var depl2=parseFloat(d['Meat'])+parseFloat(d['LiveAnimals']);
+                  var depl3=parseFloat(d['Meat'])+parseFloat(d['LiveAnimals'])+parseFloat(d['Vegetables']);
+                  var depl4=parseFloat(d['Meat'])+parseFloat(d['LiveAnimals'])+parseFloat(d['Vegetables'])+parseFloat(d['Fruits']);
+                  var depl5=parseFloat(d['Meat'])+parseFloat(d['LiveAnimals'])+parseFloat(d['Vegetables'])+parseFloat(d['Fruits'])+parseFloat(d['Fish']);
+                  var depl6=parseFloat(d['Meat'])+parseFloat(d['LiveAnimals'])+parseFloat(d['Vegetables'])+parseFloat(d['Fruits'])+parseFloat(d['Fish'])+parseFloat(d['Dairy']);
+                  focus.attr("transform", "translate(" + x(d.date) + "," + (500 - margin.top - margin.bottom)*depl/100+ ")"); 
+                  focus2.attr("transform", "translate(" + x(d.date) + "," + (500 - margin.top - margin.bottom)*depl2/100+ ")");   
+                  focus3.attr("transform", "translate(" + x(d.date) + "," + (500 - margin.top - margin.bottom)*depl3/100+ ")");   
+                  focus4.attr("transform", "translate(" + x(d.date) + "," + (500 - margin.top - margin.bottom)*depl4/100+ ")");
+                  focus5.attr("transform", "translate(" + x(d.date) + "," + (500 - margin.top - margin.bottom)*depl5/100+ ")");
+                  focus6.attr("transform", "translate(" + x(d.date) + "," + (500 - margin.top - margin.bottom)*depl6/100+ ")");     
+                  focus.select("text").text(d3.round(100-depl, 1)+"%");
+                  focus2.select("text").text(d3.round(100-depl2, 1)+"%");
+                  focus3.select("text").text(d3.round(100-depl3, 1)+"%");
+                  focus4.select("text").text(d3.round(100-depl4, 1)+"%");
+                  focus5.select("text").text(d3.round(100-depl5, 1)+"%");
+                  focus6.select("text").text(d3.round(100-depl6, 1)+"%");
+            }
+
+            svg.append("text")
     .attr("class", "x label")
-    .attr("x", 400)
-    .attr("y", height + 90)
+    .attr("x", 300)
+    .attr("y", height +30)
     .text("date");
 
     svg.append("text")
     .attr("class", "y label")
-    .attr("y", 0)
-    .attr("x", -280)
+    .attr("text-anchor", "end")
+    .attr("y", -40)
+    .attr("x", -200)
     .attr("dy", ".75em")
     .attr("transform", "rotate(-90)")
     .text("Proportion %");
 
     svg.append("text")
         .attr("x", (width / 2))             
-        .attr("y", 10)
+        .attr("y", 5 - (margin.top / 2))
         .attr("text-anchor", "middle")  
         .style("font-size", "16px") 
         .style("text-decoration", "underline")  
-        .text("World Import proportions by Agricultural Import type");
-    
-    // Add the X Axis
-    svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(50," + 460  + ")")
-        .call(xAxis)
-        .selectAll("text")
-        .attr("y", 0)
-        .attr("x", 30)
-        .attr("dy", ".35em")
-        .attr("transform", "rotate(90)");
+        .text("World Food import type by proportion of USD total");
 
 
-function type(d, i, columns) {
-  d.date = parseDate(d.date);
-  for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = d[columns[i]] / 100;
-  return d;
-}
+});
 
 </script>
