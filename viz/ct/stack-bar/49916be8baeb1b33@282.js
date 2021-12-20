@@ -118,7 +118,7 @@ export default function define(runtime, observer) {
     .call(xAxis)
   
   svg.append('g')
-    .attr('transform', `translate(${ 80 },0)`)
+    .attr('transform', `translate(${ 100 },0)`)
     .call(yAxis)
     .select('.domain').remove()
 
@@ -198,7 +198,7 @@ d3.scaleOrdinal(
   main.variable(observer("xScale")).define("xScale", ["d3","data"], function(d3,data){return(
 d3.scaleBand(
   data.map(d => d.location),
-  [ 110, 1200]
+  [ 100, 1200]
 ).padding(0.2)
 )});
   main.variable(observer("yScale")).define("yScale", ["d3","data"], function(d3,data){return(
