@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by albert6051 (http://jsbin.com/fisoyez/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.2/d3.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.parcoords > canvas {
+  font: 10px sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.parcoords > canvas {
+  pointer-events: none;
+}
+.parcoords text.label {
+  cursor: default;
+}
+.parcoords rect.background:hover {
+  fill: rgba(120,120,120,0.2);
+}
+.parcoords canvas {
+  opacity: 1;
+  transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+}
+.parcoords canvas.faded {
+  opacity: 0.25;
+}
+.parcoords {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: white;
+}
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+body { 
+  font-family: Ubuntu, Tahoma, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4em;
+  background: #f7f7f7;
+  color: #404040;
+}
+
+.axis line, .axis path {
+  fill: none;
+  stroke: #777;
+  stroke-width: 1;
+}
+.axis .tick {
+  width: 200px;
+}
+.axis text {
+  fill: #111;
+  text-anchor: right;
+  font-size: 11px;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+.axis text.label {
+  font-size: 12px;
+  cursor: move;
+  padding-bottom: 24px;
+}
+.quarter, .third, .half {
+  float: left;
+}
+.quarter {
+  width: 23%;
+  margin: 0 1%;
+}
+.third {
+  width: 31.3%;
+  margin: 0 1%;
+}
+.half {
+  width: 48%;
+  margin: 0 1%;
+}
+h3 {
+  margin: 12px 0 9px;
+}
+h3 small {
+  color: #888;
+  font-weight: normal;
+}
+p {
+  margin: 0.6em 0;
+}
+small {
+  line-height: 1.2em;
+}
+button[disabled=disabled] {
+  color: #555 !important;
+  opacity: 0.4;
+}
+.settings button[disabled=disabled] {
+  display: none;
+}
+button#keep-data,
+button#exclude-data {
+  font-weight:bold
+}
+button#keep-data:hover {
+  color: #080;
+}
+button#exclude-data:hover {
+  color: #900;
+}
+#legend {
+  text-align: left;
+  overflow-y: auto;
+  border-left: 1px solid rgba(140,140,140,0.5);
+}
+.row {
+  cursor: pointer;
+}
+.row:hover {
+  font-size: 16px;
+  line-height: 1.3em;
+}
+.off {
+  color: #999;
+}
+.color-block, .color-bar {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin: 1px 4px 1px 0px;
+}
+#rendered-bar,
+#selected-bar {
+  width:0%;
+  font-weight: bold;
+}
+#rendered-bar {
+  background: #888;
+  border-right: 1px solid #666;
+}
+#selected-bar {
+  background: rgba(160,160,160,0.5);
+  border-right: 1px solid #999;
+}
+.fillbar {
+  height: 12px;
+  line-height: 12px;
+  border:1px solid rgba(120,120,120,0.5);
+  width: 120px;
+  display: inline-block;
+}
+.little-box {
+  width: 268px;
+  float: left;
+}
+#header {
+  border-bottom: 1px solid rgba(100,100,100,0.35);
+  background: #add8e6;
+  padding: 6px 24px 4px;
+  line-height: 24px;
+}
+#header h1 {
+  display: inline-block;
+  margin: 0px 14px 0 0;
+}
+#header button {
+  vertical-align: top;
+}
+.controls {
+  float: right;
+  height: 24px;
+  line-height: 24px;
+}
+
+/* Scrollbars */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 12px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #b5b5b5;
+  border-radius: 12px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #222;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+#vehicle-list {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+</style>
+</head>
+<title>Basic Parallel Coordinates Example</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://raw.githack.com/albert6051/parallel-coordinates/master/examples/lib/d3.js"></script>
+<script src="https://raw.githack.com/albert6051/parallel-coordinates/master/d3.parcoords.js"></script>
+<body>
+  <div id="header">
+    <h1>Agricultural Production Inputs and Output Explorer</h1>
+    <button title="Export data as CSV" id="export-data">Export CSV</button>
+  </div>
+  <div id="example" class="parcoords" style="width:100%;height:450px">
+  </div>
+  <div id="wrap">
+    <div class="third" id="controls">
+      <div class="bright">
+        <h3>What is this?</h3>
+        <p>
+          A multidimensional explorer of <a href="https://raw.githubusercontent.com/albert6051/Testing/main/out_parallel.csv">
+          Food Production Inputs and Output</a> derived from the result of two scenario simulations.
+        </p>
+        <p>
+          The parallel coordinates displays the summary content of agricultural production in the database across 8 dimensions, colored by years. 
+        </p>
+      </div>
+
+      <div class="little-box">
+        <h3>Controls</h3>
+        <p>
+          <strong>Brush</strong>: Drag vertically along an axis.<br/>
+          <strong>Remove Brush</strong>: Tap the axis background.<br/>
+          <strong>Reorder Axes</strong>: Drag a label horizontally.<br/>
+          <strong>Invert Axis</strong>: Tap an axis label.<br/>
+        </p>
+      </div>
+      <div class="little-box">
+        <h3>Credits &amp; License</h3>
+         <p>
+          Adapted from
+          <a href="http://bl.ocks.org/syntagmatic/raw/3150059/">Nutrient Explorer </a><br/>
+           and
+          <a href="https://syntagmatic.github.io/parallel-coordinates/">Parallel Coordinates</a><br/>
+           by Kai Chang
+        </p>
+        <p>
+          No Intend for Publishing, For Private Educational Usage Only<br/>
+        </p>
+      </div>
+    </div>
+    <div  class="third">
+      <h3>Reset/Hide Axis</h3>
+        <p>Click twice to reset scale, one to hide Axis</p>
+        <input type="checkbox" class="myCheckbox" value="TFP Index"> TFP Index</br>
+        <input type="checkbox" class="myCheckbox" value="Gross Production"> Gross Production</br>
+        <input type="checkbox" class="myCheckbox" value="Agricultural land"> Agricultural land</br>
+        <input type="checkbox" class="myCheckbox" value="Agricultural labor"> Agricultural labor</br>
+        <input type="checkbox" class="myCheckbox" value="Agricultural capital stock"> Agricultural capital stock</br>
+        <input type="checkbox" class="myCheckbox" value="Farm machinery"> Farm machinery</br>
+        <input type="checkbox" class="myCheckbox" value="Fertilizer"> Fertilizer</br>
+    </div>
+    <div class="third">
+      <h3>Numbers of Data Points: </h3>
+      <div id="Vehicles_num"></div>
+      <h3>Brushed Command</h3>
+        <button type="button" class="keep">Keep</button>
+        <button type="button" class="exclude">Exclude</button>
+        <button type="button" class="restore">Restore</button>
+      </p>
+    </div>
+  </div>
+<script id="jsbin-javascript">
+d3.csv('https://raw.githubusercontent.com/albert6051/Testing/main/out_parallel.csv', function(data){
+   let frames = data.map(function(val, index){
+    return {
+            "Year" : val.variable,
+            "TFP Index" : val["Agricultural TFP Index"], 
+            "Gross Production" : val["Gross agricultural production in $1000"], 
+            "Agricultural land" : val["Agricultural land in 1000 hectares"],
+            "Agricultural labor" : val["Agricultural labor in 1000 persons"],
+            "Agricultural capital stock" : val["Agricultural capital stock in $1000"],
+            "Farm machinery" : val["Farm machinery in Metric horsepower 1000 CV"],
+            "Fertilizer" : val["Fertilizer in metric tonnes"]
+    };
+   });
+  var current_frames = frames;
+  var sample_num = 10;
+  var pc0 = d3.parcoords()("#example");
+  var hidden_axis = ["ID"];
+  var colors = d3.scale.linear()
+    .domain([2014, 2015, 2016, 2017, 2018, 2019])
+    .range(["#3366cc", "#dc3912", "#ff9900", "#109618", "#990099", "#0099c6"]);
+  
+  pc0.data(current_frames)
+    .color(function(d) {return colors(d['Year']);})
+	.hideAxis(hidden_axis)
+    .mode("queue")
+	.render()
+	.brushMode("1D-axes")
+	.reorderable()
+	.interactive();
+  
+  // hide axis
+  d3.selectAll(".myCheckbox").on("click",updateAxis);
+  function updateAxis(){
+    var choices = ["ID"];
+    d3.selectAll(".myCheckbox").each(function(d){
+      cb = d3.select(this);
+      if(cb.property("checked")){
+        choices.push(cb.property("value"));
+      }
+    });
+    hidden_axis = choices;
+    pc0.hideAxis(hidden_axis);
+    pc0.brushReset();
+  }
+  
+  // Brushed Keep
+  d3.selectAll(".keep").on("click",brushedKeep);
+  function brushedKeep(){
+    let toKeep = pc0.brushed();
+    current_frames = toKeep;
+    pc0.data(current_frames)
+      .hideAxis(hidden_axis)
+      .mode("queue")
+      .render();
+    pc0.brushReset();
+    data_table(current_frames.slice(0, sample_num));
+  }
+  // Brushed Exclude
+  d3.selectAll(".exclude").on("click",brushedExclude);
+  function brushedExclude(){
+    let toExclude = pc0.brushed();
+    let excludeList = toExclude.map(function(d){
+      return d.ID;
+    })
+    current_frames = current_frames.filter(e => !excludeList.includes(e.ID));
+    pc0.data(current_frames)
+      .hideAxis(hidden_axis)
+      .mode("queue")
+      .render();
+    pc0.brushReset();
+    data_table(current_frames.slice(0, sample_num));
+  }
+  
+  // Brushed Restore
+  d3.selectAll(".restore").on("click",restore);
+  function restore(){
+    current_frames = frames;
+    pc0.data(current_frames)
+      .hideAxis(hidden_axis)
+      .mode("queue")
+      .render();
+    pc0.brushReset();
+    data_table(current_frames.slice(0, sample_num));
+  }
+  
+  d3.select("#search").on("keyup", search);
+  
+  function search() {
+    var query = this.value;
+    if (query.length > 0) {
+      pattern = new RegExp(this.value,"i")
+      var search_result = current_frames.filter(function(d) { return pattern.exec(d.ID); })
+      data_table(search_result.slice(0, sample_num));
+    } else {
+      data_table(current_frames.slice(0, sample_num));
+    }
+  }
+  d3.select("#Vehicles_num")
+      .append("text")
+      .attr('class', 'label')
+      .attr('id', 'current_number')
+      .text(current_frames.length);
+  
+  data_table(current_frames.slice(0, sample_num));
+  
+  // simple data table
+  function data_table(sample) {
+    // sort by first column
+    var sample = sample.sort(function(a,b) {
+      var col = d3.keys(a)[0];
+      return a[col] < b[col] ? -1 : 1;
+    });
+    var table = d3.select("#vehicle-list")
+      .html("")
+      .selectAll(".row")
+      .data(sample)
+      .enter().append("div")
+        .on("mouseover", function highlight(d){
+          pc0.highlight([d]);
+        })
+        .on("mouseout", function unhighlight(d){
+          pc0.unhighlight([d]);
+        });
+    table.append("span")
+      .text(function(d) { return d.ID; });
+    
+    // export result to CSV
+    d3.select("#export-data").on("click", export_csv);
+    function export_csv() {
+      var keys = d3.keys(current_frames[0]);
+      var rows = current_frames.map(function(row){
+        return keys.map(function(k) {return row[k];});
+      });
+      var csv = d3.csv.format([keys].concat(rows)).replace(/\n/g,"<br/>\n");
+      var styles = "<style>body { font-family: sans-serif; font-size: 12px; }</style>";
+      window.open("text/csv").document.write(styles + csv);
+    }
+    
+    d3.select("#current_number")
+      .text(current_frames.length);
+  }
+});
+
+
+
+</script>
+</body>
+</html>

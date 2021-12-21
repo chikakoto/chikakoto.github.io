@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2021 by albert6051 (http://jsbin.com/foxuluk/16/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://d3js.org/d3.v6.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.root {
+  display: flex;
+}
+
+.legend-item {
+  cursor: pointer;
+}
+
+.legend-item:hover {
+  text-decoration: underline;
+}
+
+.extra-options-container {
+  font-size: 12px;
+  margin-top: 5px;
+  display: flex;
+  width: 110px;
+  justify-content: space-between;
+}
+
+.hide-all-option, .show-all-option {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hide-all-option:hover, .show-all-option:hover {
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+  <select id="selectButton"></select>
+  <div class="root">
+    <div id="my_dataviz"></div>
+    <div id="legend"></div>
+  <div>
+<script id="jsbin-javascript">
+
+var margin = {top: 50, right: 30, bottom: 50, left: 120},
+    width = 1000 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+const svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+
+//Read the data
+d3.csv("https://raw.githubusercontent.com/albert6051/Testing/main/out.csv").then( function(data) {
+  
+  // selected group
+  var full_set = ["Industrialized countries", "Developing countries", "Low income", "Lower-middle income",
+              "Upper-middle income", "High income", "World"]
+  var selected = ["Industrialized countries", "Developing countries", "Low income", "Lower-middle income",
+              "Upper-middle income", "High income", "World"]
+  var selected_d = data.filter(d => selected.includes(d.region))
+  
+  // List of groups (here I have one group per column)
+  const allRegion = new Set(selected_d.map(d => d.region))
+  
+  // List of groups (here I have one group per column)
+  var allGroup = ["Agricultural TFP Index", "Gross agricultural production in $1000", "Agricultural land in 1000 hectares",
+                 "Agricultural labor in 1000 persons", "Agricultural capital stock in $1000", "Farm machinery in Metric horsepower 1000 CV",
+                 "Fertilizer in metric tonnes"]
+  
+  // Update Year to date type
+  data.forEach(d => {
+    d.variable = new Date(d.variable);
+  });
+  
+  // Create new data with the selection
+  var dataFilter = selected_d.map(function(d) {return {region: d.region, year: d.variable, value: d["Agricultural TFP Index"]}; })
+  
+  // group the data: I want to draw one line per group
+  var sumstat = d3.group(dataFilter, d => d.region);
+  
+  // color palette
+  var color = d3.scaleOrdinal()
+    .domain(full_set)
+      .range([
+      '#4c78a8',
+      '#9ecae9',
+      '#f58518',
+      '#ffbf79',
+      '#54a24b',
+      '#88d27a',
+      '#b79a20',
+    ]);
+  
+  // add the options to the button
+  d3.select("#selectButton")
+    .selectAll('myOptions')
+      .data(allGroup)
+    .enter()
+      .append('option')
+    .text(function (d) {return d;}) // text showed in the menu
+    .attr("value" , function (d) {return d;}) // corresponding value returned by the button
+
+  // Add X axis --> it is a date format
+  const x = d3.scaleTime()
+    .domain(d3.extent(dataFilter, function(d) {return d.year; }))
+    .range([0, width ]);
+  xAxis = svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x));
+  
+  // Add Y axis
+  const y = d3.scaleLinear()
+    .domain([0, d3.max(dataFilter, function(d) {return +d.value; })])
+    .range([height, 0]);
+  yAxis = svg.append("g")
+    .call(d3.axisLeft(y))
+  
+  // Add X label
+  const xlabel = svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width/2)
+    .attr("y", height + 40)
+    .style("font-size", 20)
+    .text("Year");
+  
+  // Add y label
+  const ylabel = svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width/2)
+    .attr("y", -30)
+    .attr("dy", ".75em")
+    .style("font-size", 24)
+    .text(allGroup[0]);
+  
+  // Add a clipPath: everything out of this area won't be drawn.
+  const clip = svg.append("defs").append("svg:clipPath")
+    .attr("id", "clip")
+    .append("svg:rect")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("x", 0)
+    .attr("y", 0);
+ 
+  // Add brushing
+  const brush = d3.brushX()
+    .extent([[0, 0], [width, height]])
+    .on("end", updateChart)
+  
+  // Creat the line variable: where both the line and the brush take place
+  const line = svg.append('g')
+    .attr("clip-path", "url(#clip)")
+
+  // Add the line
+  line.selectAll(".line")
+    .data(sumstat)
+    .join("path")
+    .attr("class", "line")  // I add the class line to be able to modify this line later on.
+    .attr("fill", "none")
+    .attr("stroke", function(d){ return color(d[0]); })
+    .attr("stroke-width", 1.5)
+    .attr("d", function(d){
+          return d3.line()
+            .x(function(d) { return x(d.year); })
+            .y(function(d) { return y(+d.value); })
+            (d[1])
+        })
+  
+  // Create legend checkbox
+  const legendContainer = d3.select("#legend");
+  
+  const legends = legendContainer
+    .append("svg")
+    .attr("height", height-260)
+    .attr("width", 150)
+    .selectAll("g")
+    .data(full_set)
+    .enter()
+    .append("g")
+      .attr("class", "legend-item")
+      .attr("transform", (full_set, index) => `translate(0,${ index * 20 })`)
+      .on("click", clickLegendHandler);
+  
+  legends.append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("width", 12)
+    .attr("height", 12)
+    .style("fill", full_set => color(full_set))
+    .select(function() { return this.parentNode; })
+    .append("text")
+    .attr("x", 20)
+    .attr("y", 10)
+    .text(full_set => full_set)
+    .attr('class', 'textselected')
+    .style('text-anchor', 'start')
+    .style('font-size', 12);
+  
+  const extraOptionsContainer = legendContainer.append('div')
+    .attr('class', 'extra-options-container')
+    .attr("fill", "pink")
+  
+  extraOptionsContainer.append('div')
+    .attr('class', 'hide-all-option')
+    .text('Hide All')
+    .on("click", () => {
+      selected = []
+      redraw()
+  })
+
+  extraOptionsContainer.append('div')
+    .attr('class', 'show-all-option')
+    .text('Show All')
+    .on("click", () => {
+      selected = full_set
+      redraw()
+  })
+  // Add the brushing
+    line
+      .append("g")
+        .attr("class", "brush")
+        .call(brush);
+  
+   // A function that set idleTimeOut to null
+    let idleTimeout
+    function idled() { idleTimeout = null; }
+  
+  // A function that update the chart for given boundaries
+  function updateChart(event, d){
+    
+    // what are the selected boundaries
+    extent = event.selection
+    
+    // If no selection, back to initial coordinate, otherwise update
+    if(!extent){
+      if(!idleTimeout) return idleTimeout = setTimeout(idled, 350); // This allows to wait a little bit
+      x.domain([ 4,8])
+    }else{
+      x.domain([x.invert(extent[0]), x.invert(extent[1]) ])
+      line.select(".brush").call(brush.move, null) // This remove the gray brush
+    }
+    
+    // Update axis and line position
+    xAxis.transition().duration(1000).call(d3.axisBottom(x));
+   
+    line
+      .selectAll(".line")
+      .transition()
+      .duration(1000)
+      .attr("d", function(d){
+          return d3.line()
+            .x(function(d) { return x(d.year); })
+            .y(function(d) { return y(+d.value); })
+            (d[1])
+        })
+
+  }
+ 
+  // If user double click, reinitialize the chart
+    svg.on("dblclick",function(){
+      x.domain(d3.extent(dataFilter, function(d) { return d.year; }))
+      xAxis.transition().call(d3.axisBottom(x))
+      line
+        .selectAll('.line')
+        .transition()
+        .attr("d", function(d){
+          return d3.line()
+            .x(function(d) { return x(d.year); })
+            .y(function(d) { return y(+d.value); })
+            (d[1])
+        })
+    });
+  
+  // A function that update the chart
+  function update(selectedGroup) {
+   
+    dataFilter = data.map(function(d) {return {region: d.region, year: d.variable, value: d[selectedGroup]}; })
+    
+    const current_d = dataFilter.filter(d => selected.includes(d.region))
+    
+    // group the data: I want to draw one line per group
+    var sumstat = d3.group(current_d, d => d.region);
+    
+    // Give these new data to updata yAxis and line
+    y.domain([0, d3.max(current_d, function(d) {return +d.value; })])
+    yAxis.transition().duration(1000).call(d3.axisLeft(y));
+    ylabel.transition().duration(1000).text(selectedGroup)
+    
+    line
+      .selectAll(".line")
+      .data(sumstat)
+      .transition()
+      .duration(1000)
+      .attr("d", function(d){
+          return d3.line()
+            .x(function(d) { return x(d.year); })
+            .y(function(d) { return y(+d.value); })
+            (d[1])
+        })
+ 
+  }
+  
+  // When the button is changed, run the updataChart function
+  d3.select("#selectButton").on("change", function(event, d){
+    // recover the option that been chosen
+    const selectedOption = d3.select(this).property("value")
+    // run the updateChart function with this selected option
+    update(selectedOption)
+  });
+  
+  function clickLegendHandler(full_set) {
+    
+    var selected_region = full_set['currentTarget']['__data__']
+    if (selected.includes(selected_region)) {
+      selected = selected.filter(d => d != selected_region)
+    }else {
+      selected.push(selected_region)
+    }
+    
+    redraw()
+  }
+  
+  function redraw(){
+    const current_d = dataFilter.filter(d => selected.includes(d.region))
+    
+    // group the data: I want to draw one line per group
+    var sumstat = d3.group(current_d, d => d.region);
+    
+    // Update opacity
+    legends.each(function(selected_region) {
+      const opacityValue = selected.includes(selected_region) ? 1 : 0.2;
+      d3.select(this).attr("opacity", opacityValue)
+      
+    });
+    
+    // Update Axis
+    y.domain([0, d3.max(current_d, function(d) {return +d.value; })])
+    yAxis.transition().duration(1000).call(d3.axisLeft(y));
+    
+    // Redraw the lines
+    line.exit()
+      .remove();
+    
+    line
+      .selectAll(".line")
+      .data(sumstat)
+      .join("path")
+      .attr("class", "line")  // I add the class line to be able to modify this line later on.
+      .attr("fill", "none")
+      .attr("stroke", function(d){ return color(d[0]); })
+      .attr("stroke-width", 1.5)
+      .attr("d", function(d){
+            return d3.line()
+              .x(function(d) { return x(d.year); })
+              .y(function(d) { return y(+d.value); })
+              (d[1])
+        })    
+  }
+
+  
+  
+   
+})
+</script>
+</body>
+</html>
